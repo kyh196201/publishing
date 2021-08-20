@@ -1,0 +1,167 @@
+@charset "UTF-8";
+.del-btn {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  background: #cdcdcd;
+  border-radius: 50%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  font-size: 0;
+}
+
+.del-btn::after, .del-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1px;
+  height: 10px;
+  background: #fff;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.del-btn::after {
+  -webkit-transform: translate(-50%, -50%) rotate(90deg);
+          transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.sr-only {
+  position: absolute;
+  /* position: absolute/fixed 에서만 clip 속성 작동 */
+  margin: -1px;
+  /* 부트스트랩에선 안씀 */
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  /* overflow: visible 이면 clip 속성 작동 안됨 */
+  clip: rect(0, 0, 0, 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  /* H5BP에선 안씀 */
+}
+
+.btn {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 120px;
+  height: 40px;
+  font-size: 15px;
+  background: #002c5e;
+  color: white;
+  cursor: pointer;
+}
+
+.ico {
+  width: 18px;
+  height: 18px;
+  background-color: #575757;
+  border-radius: 50%;
+  font-size: 0;
+  cursor: pointer;
+}
+
+.ico-point-dark {
+  background-color: #002c5e;
+}
+
+.ico-play {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.ico-play:after {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border: 2px solid white;
+  border-top: none;
+  border-bottom: none;
+}
+
+.ico-play.paused:after {
+  width: 0;
+  height: 0;
+  border: 0;
+  border-left: 6px solid #fff;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+}
+
+.ico-plus {
+  position: relative;
+}
+
+.ico-plus::after, .ico-plus::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 50%;
+  height: 2px;
+  background-color: white;
+}
+
+.ico-plus::after {
+  -webkit-transform: translate(-50%, -50%) rotate(90deg);
+          transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.swiper-button-next.navigation-btn,
+.swiper-button-prev.navigation-btn {
+  width: 44px;
+  height: 44px;
+  background-color: rgba(31, 45, 61, 0.4);
+}
+
+.swiper-button-next.navigation-btn::after,
+.swiper-button-prev.navigation-btn::after {
+  font-size: 18px;
+  color: white;
+}
+
+.swiper-button-next.navigation-arrow,
+.swiper-button-prev.navigation-arrow {
+  width: 46px;
+  height: 46px;
+}
+
+.swiper-button-next.navigation-arrow::after,
+.swiper-button-prev.navigation-arrow::after {
+  font-size: 44px;
+  color: #666;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+  will-change: color;
+}
+
+.swiper-button-next.navigation-arrow:hover::after,
+.swiper-button-prev.navigation-arrow:hover::after {
+  font-size: 44px;
+  color: #000;
+}
+
+.comm-input {
+  border: 1px solid #ccc;
+}
+/*# sourceMappingURL=common.css.map */
