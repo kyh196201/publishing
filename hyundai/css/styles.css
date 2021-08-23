@@ -440,7 +440,7 @@ html {
   border: 1px solid #ddd;
   background-color: white;
   border-top: none;
-  z-index: 1;
+  z-index: 2;
 }
 
 .header__nav__item.lang .lang-wrapper li {
@@ -449,16 +449,17 @@ html {
 
 .header__nav__item.lang .lang-wrapper li a {
   display: block;
+  height: 30px;
   padding: 5px 0;
   text-align: center;
 }
 
-.header__nav__item.lang.on .lang-btn::after {
+.header__nav__item.lang.opened .lang-btn::after {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 
-.header__nav__item.lang.on .lang-wrapper {
+.header__nav__item.lang.opened .lang-wrapper {
   display: block;
 }
 
@@ -682,6 +683,10 @@ html {
   margin: 0 auto;
 }
 
+.main .banner-list:hover .banner-list__pagination .pagination__desc {
+  opacity: 1;
+}
+
 .main .banner-list .swiper-container {
   width: 100%;
   height: 100%;
@@ -741,9 +746,13 @@ html {
 }
 
 .main .banner-list__pagination .pagination__desc {
+  opacity: 0;
   padding: 10px;
   color: #555;
   font-size: 14px;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+  will-change: color;
 }
 
 .main .banner-list__pagination .pagination__desc strong {
@@ -922,6 +931,21 @@ html {
 
 .main .content.new-content .month-benefit__swiper__navigation .swiper-button-prev {
   left: 0;
+}
+
+.main .content.new-content .month-benefit__swiper__pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 20px 0;
+}
+
+.main .content.new-content .month-benefit__swiper__pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
 }
 
 .main .content.new-content .month-benefit__list {

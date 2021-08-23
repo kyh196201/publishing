@@ -85,20 +85,21 @@ html {
           border: 1px solid #ddd;
           background-color: $white;
           border-top: none;
-          z-index: 1;
+          z-index: 2;
 
           li {
             width: 100%;
 
             a {
               display: block;
+              height: 30px;
               padding: 5px 0;
               text-align: center;
             }
           }
         }
 
-        &.on {
+        &.opened {
           .lang-btn {
             &::after {
               transform: rotate(180deg);
@@ -317,6 +318,18 @@ html {
     max-height: 720px;
     margin: 0 auto;
 
+    &:hover {
+      .banner-list {
+        &__pagination {
+          .pagination {
+            &__desc {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+
     // swiper
     .swiper {
       &-container {
@@ -372,9 +385,12 @@ html {
 
       .pagination {
         &__desc {
+          opacity: 0;
           padding: 10px;
           color: #555;
           font-size: 14px;
+          transition: color 0.3s ease;
+          will-change: color;
 
           strong {
             display: block;
@@ -561,6 +577,19 @@ html {
 
             .swiper-button-prev {
               left: 0;
+            }
+          }
+
+          &__pagination {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+
+            .swiper-pagination {
+              &-bullet {
+                width: 12px;
+                height: 12px;
+              }
             }
           }
         }

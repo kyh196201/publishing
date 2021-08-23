@@ -143,7 +143,7 @@
       <section class="banner-list-wrap">
         <div class="banner-list">
           <!-- swiper -->
-          <div class="swiper-container banner-list__swiper">
+          <div id="main-banner-list" class="swiper-container banner-list__swiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <!-- banner section -->
@@ -195,7 +195,7 @@
               </li>
             </ul>
             <!-- button -->
-            <button type="button" class="ico ico-play">
+            <button type="button" id="main-banner-play" class="ico ico-play">
               슬라이드 시작/일시 정지
             </button>
           </div>
@@ -243,7 +243,7 @@
               <h2 class="content__title">이달의 구매혜택</h2>
               <section class="month-benefit">
                 <div class="month-benefit__swiper">
-                  <div class="swiper-container">
+                  <div id="benefit-swiper" class="swiper-container">
                     <div class="swiper-wrapper">
                       <!-- slide -->
                       <!-- slide 1 -->
@@ -629,6 +629,7 @@
                   <div class="search-vehicle__slider">
                     <div class="swiper-container">
                       <div class="swiper-wrapper">
+                        <!-- 슬라이드 1 -->
                         <div class="swiper-slide">
                           <div class="model">
                             <div class="model__info">
@@ -660,6 +661,8 @@
                             </figure>
                           </div>
                         </div>
+
+                        <!-- 슬라이드2 -->
                       </div>
                       <!-- navigation -->
                       <div class="search-vehicle__slier__navigation">
@@ -1211,6 +1214,9 @@
       </div>
     </footer>
   </div>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+  <script src="./js/index.js" type="module"></script>
 </body>
 
 </html>
