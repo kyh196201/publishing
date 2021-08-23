@@ -153,6 +153,33 @@ $point-dark: #002c5e;
   border: 1px solid #ccc;
 }
 
+.hashtag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  padding: 0 13px;
+  background-color: #fff;
+  border-radius: 15px;
+
+  &.active {
+    background-color: #007fa8;
+
+    .hashtag {
+      &__title {
+        color: #fff;
+      }
+    }
+  }
+
+  &__title {
+    line-height: 100%;
+    color: #000;
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
+
 // mixins
 @mixin ellipsis($line: 1) {
   @if ($line == 1) {
