@@ -1,17 +1,235 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
 .sr-only {
   position: absolute;
-
   overflow: hidden;
-
   width: 1px;
-
   height: 1px;
-
   padding: 0;
-
   margin: -1px;
-
   border: 0;
-
   clip: rect(0, 0, 0, 0);
+}
+
+html,
+body {
+  overflow: hidden;
+}
+
+// Common
+// 로고
+.logo {
+  &__image {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+  }
+}
+
+// 아이콘 버튼
+.icon-btn {
+  display: inline-block;
+  font-size: 16px;
+  color: white;
+
+  &__title {
+    font-size: 0;
+  }
+}
+
+// 해시 태그
+.hashtag {
+  color: #4263eb;
+  font-size: 16px;
+}
+
+.hashtag-list {
+  font-size: 0;
+
+  &__item {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+}
+
+// Common End
+
+// 컨테이너
+.container {
+  overflow: auto;
+  width: 100vw;
+  max-height: 100vh;
+}
+
+// 헤더
+.header {
+  background-color: #252525;
+
+  &__inner {
+    height: 56px;
+    padding: 0 16px;
+
+    &::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  }
+
+  &__logo {
+    float: left;
+    width: 126px;
+    height: 56px;
+    padding: 12px 0;
+
+    .logo {
+      height: 100%;
+    }
+  }
+
+  &__btn-container {
+    display: flex;
+    align-items: center;
+    float: right;
+    height: 100%;
+
+    .icon-btn {
+      font-size: 18px;
+
+      &:not(:first-child) {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+// 메인
+.main {
+  // TODO 강의 참고해서 수정
+  &__video-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    background-color: black;
+  }
+
+  &__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    margin: auto;
+  }
+
+  &__content {
+    &::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  }
+
+  // 메인 정보
+  &__info {
+    border: 3px solid blue;
+
+    .hashtag-list {
+      margin-bottom: 16px;
+    }
+
+    .info {
+      // 비디오 제목
+      &__title {
+        position: relative;
+        margin-bottom: 16px;
+        padding-right: 20px;
+
+        .title {
+          font-size: 18px;
+          font-weight: bold;
+          line-height: 1.3;
+        }
+
+        &.closed {
+          .title {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2; /* 라인수 */
+            -webkit-box-orient: vertical;
+            word-break: break-all;
+          }
+
+          .info {
+            &__open-btn {
+              display: inline-block;
+            }
+
+            &__close-btn {
+              display: none;
+            }
+          }
+        }
+      }
+
+      // 비디오 제목 버튼
+      &__open-btn,
+      &__close-btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 0;
+
+        i {
+          font-size: 16px;
+          color: darkgray;
+        }
+      }
+
+      &__open-btn {
+        display: none;
+      }
+
+      // 상세 정보
+      &__detail {
+        margin-bottom: 16px;
+        font-size: 0;
+        color: #343a40;
+      }
+
+      &__views,
+      &__release-date {
+        display: inline-block;
+        font-size: 14px;
+      }
+
+      &__views {
+        margin-right: 8px;
+      }
+    }
+  }
+
+  // 관련 비디오
+  &__related-videos {
+    border: 3px solid blue;
+  }
+
+  &__info,
+  &__related-videos {
+    float: left;
+    width: 50%;
+    padding: 16px;
+  }
 }

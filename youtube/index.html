@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="./css/index.css" />
     <title>Youtube Clone</title>
   </head>
@@ -14,20 +20,23 @@
         <div class="header__inner">
           <h1 class="header__logo">
             <a href="/youtube/index.html">
-              <img
-                src="./images/logo.png"
-                alt="로고.png"
-                width="100"
-                height="50"
-              />
+              <figure class="logo">
+                <img
+                  class="logo__image"
+                  src="./images/logo.png"
+                  alt="로고.png"
+                />
+              </figure>
             </a>
           </h1>
-          <div class="header__btns">
-            <button type="button">
-              <span>검색 버튼</span>
+          <div class="header__btn-container">
+            <button type="button" class="icon-btn">
+              <i class="fas fa-search"></i>
+              <span class="icon-btn__title">검색 버튼</span>
             </button>
-            <button type="button">
-              <span>메뉴 버튼</span>
+            <button type="button" class="icon-btn">
+              <i class="fas fa-ellipsis-v"></i>
+              <span class="icon-btn__title">메뉴 버튼</span>
             </button>
           </div>
         </div>
@@ -38,10 +47,10 @@
         <!-- 미디어 영역 -->
         <section class="main__media">
           <h3 class="sr-only">메인 미디어 영역</h3>
-          <figure class="media__content">
+          <figure class="main__video-container">
             <video
               src="./images/video.mp4"
-              class="media__video"
+              class="main__video"
               controls
             ></video>
           </figure>
@@ -53,26 +62,28 @@
             <!-- 해시태그 -->
             <ul class="hashtag-list">
               <li class="hashtag-list__item">
-                <a href="#" class="hashtag"> #DreamCoding </a>
+                <a href="#"> <span class="hashtag"> #DreamCoding</span> </a>
               </li>
               <li class="hashtag-list__item">
-                <a href="#" class="hashtag"> #Javascript </a>
+                <a href="#"> <span class="hashtag"> #Javascript</span> </a>
               </li>
               <li class="hashtag-list__item">
-                <a href="#" class="hashtag"> #Clone Coding </a>
+                <a href="#"> <span class="hashtag"> #Clone Coding</span> </a>
               </li>
             </ul>
 
             <!-- 제목 -->
-            <div class="info__title">
-              <p class="title">
+            <div class="info__title closed">
+              <h4 class="title">
                 클론코딩 유튜브 사이트 따라 만들기(HTML+CSS 연습편, 웹
                 포트폴리오) | 프론트엔드 개발자 입문편: HTML, CSS, Javascript
-              </p>
+              </h4>
               <button type="button" class="info__open-btn">
+                <i class="fas fa-caret-down"></i>
                 <span>비디오 제목 펼치기 버튼</span>
               </button>
               <button type="button" class="info__close-btn">
+                <i class="fas fa-caret-up"></i>
                 <span>비디오 제목 닫기 버튼</span>
               </button>
             </div>
