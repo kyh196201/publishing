@@ -128,6 +128,22 @@ table {
   border-spacing: 0;
 }
 
+*, *::after, *::before {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 18px;
+}
+
+body {
+	font-size: 1rem;
+	font-family: 'Jost', 'Noto Sans KR', sans-serif;
+	background-color: $body-color;
+	color: $main-font-color;
+	letter-spacing: -0.025em;
+}
+
 a {
 	text-decoration: none;
 	color: inherit;

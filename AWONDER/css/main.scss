@@ -1,13 +1,5 @@
 @import './variables.scss';
-
-*, *::after, *::before {
-	box-sizing: border-box;
-}
-
-body {
-	font-family: 'Jost', 'Nanum Gothic', sans-serif;
-	background-color: $body-color;
-}
+@import './mixins.scss';
 
 // Common
 .banner-swiper {
@@ -18,17 +10,23 @@ body {
 			height: 54px;
 			border-radius: 50%;
 			// NOTE background 복습!!
-			background: url('../images/swiper-btn.svg') no-repeat 50% 50%;
-			background-size: 0.444em;
 			background-color: #fff;
-
+			box-shadow: $swiper-btn-shadow;
+			
 			&::after {
-				font-size: 0;
+				content: '';
+				background: url('../images/swiper-btn.svg') no-repeat 50% 50%;
+				background-size: 0.444em;
+				width: 100%;
+				height: 100%;
+				font-size: 1rem;
 			}
 		}
 
 		&-prev {
-			transform: rotate(180deg);
+			&::after {
+				transform: rotate(180deg);
+			}
 		}
 	}
 
@@ -66,16 +64,201 @@ body {
 				}
 			}
 		}
+
+		&--black {
+			.swiper-pagination {
+				&-bullet {
+					background-color: $main-font-color;
+
+					&::after {
+						border-top-color: $main-font-color;
+					}
+				}
+			}
+		}
+	}
+}
+
+// 상품 리스트
+.product-list {
+	&::after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+
+	li {
+		float: left;
+		width: 25%;
+		padding: 0 toRem(20px) toRem(80px);
+	}
+}
+
+.product {
+	&__thumbnail {
+		overflow: hidden;
+		position: relative;
+		width: 100%;
+		border-radius: toRem(36px);
+
+		img {
+			width: 100%;
+			height: auto;
+			max-height: 100%;
+			object-fit: cover;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background-color: $dim-color;
+		}
+	}
+
+	&__name {
+		margin: 1.25em 0 0.5em;
+		font-size: toRem(22.5px);
+		font-weight: 600;
+	}
+
+	&__desc {
+		margin: 0 1em 0.5em 0;
+		font-size: toRem(15.75px);
+		font-weight: 500;
+		color: #999;
+	}
+	
+	&__name,
+	&__desc {
+		line-height: 1.5;
+		height: 3em;
+		@include line(2);
+	}
+
+	&__price {
+		font-weight: 600;
+		line-height: 1.5;
+	}
+
+	&__origin-price {
+		font-size: toRem(15.75px);
+		color: #999;
+	}
+
+	&__sale-price {
+		font-size: toRem(22.5px);
+	}
+
+	&__review-cont {
+		margin: 10px 0;
+		font-size: 0;
+
+		.star-rate {
+			display: inline-block;
+			margin-right: 5px;
+		}
+	}
+
+	&__review {
+		display: inline-block;
+		font-size: toRem(16px);
+		line-height: 1.5;
+
+		strong {
+			font-weight: bold;
+		}
+	}
+
+	// wide
+	&.product--wide {
+		.product {
+			&__link {
+				display: flex;
+				align-items: center;
+				width: 100%;
+			}
+
+			&__thumbnail,
+			&__info {
+				flex: 0 0 50%;
+			}
+
+			&__thumbnail {
+				display: flex;
+				padding: 10%;
+				align-items: center;
+				justify-content: center;
+
+				img {
+					width: auto;
+					height: auto;
+					max-width: 100%;
+				}
+
+				&::after {
+					top: 15%;
+					left: 15%;
+					right: auto;
+					bottom: auto;
+					width: 70%;
+					height: 70%;
+					border-radius: 35%;
+					transform: rotate(45deg);
+					background-color: #f8f4ed;
+					z-index: -1;
+				}
+			}
+
+			&__info {
+				padding: 0 10px;
+			}
+
+			&__name {
+				font-size: 2rem;
+			}
+
+			&__origin-price {
+				font-size: 1rem;
+			}
+
+			&__sale-price {
+				font-size: toRem(25px);
+			}
+		}
+
+
+	}
+}
+
+.star-rate {
+	overflow: hidden;
+	width: 100%;
+	height: 1rem;
+	background: url('../images/star.png');
+	background-repeat: repeat-x;
+	// NOTE background-size auto
+	background-size: auto 1rem;
+	// background-size: 1.25rem 1rem;
+	width: 6.25rem;
+
+	&__on {
+		width: 100%;
+		height: 100%;
+		background: url('../images/star_on.png');
+		background-repeat: repeat-x;
+		background-size: auto 1rem;
 	}
 }
 
 .container {
-	overflow: hidden;
 	width: 100%;
 	max-width: 1920px;
 	min-width: 1200px;
 	margin: 0 auto;
-	// box-shadow: 0 0 40px rgba(black, 10%);
 }
 
 // 헤더
@@ -92,6 +275,8 @@ body {
 	min-width: 1200px;
 	padding: 0 30px;
 	background-color: #fff;
+	box-shadow: $main-box-shadow;
+	z-index: 99;
 
 	&__logo {
 		margin-right: 60px;
@@ -157,7 +342,7 @@ body {
 			}
 
 			&__title {
-				font-size: 18px;
+				font-size: 1rem;
 				font-weight: 600;
 				transition: color 0.3s linear;
 			}
@@ -210,8 +395,8 @@ body {
 				position: absolute;
 				top: -2px;
 				right: -4px;
-				width: 20px;
 				height: 20px;
+				width: 20px;
 				border-radius: 50%;
 				background-color: $main-color;
 				color: #fff;
@@ -230,21 +415,42 @@ body {
 .main {
 	padding-top: 80px;
 
-	&__section {
-		padding-top: 100px;
+	&__container {
+		box-shadow: $main-box-shadow;
 	}
 
-	&__section-title {
-		margin-bottom: 60px;
-		font-size: 54px;
-		font-weight: 600;
-		text-align: center;
-		color: #333;
+	&__section {
+		padding: 100px 0;
+
+		&__cont {
+			width: 100%;
+			max-width: 1430px;
+			min-width: 1200px;
+			margin: 0 auto;
+		}
 	}
+
+	.section {
+		&__title-wrap {
+			text-align: center;
+			margin-bottom: 60px;
+		}
+		
+		&__title {
+			font-size: 54px;
+			font-weight: 600;
+		}
+
+		&__sub-title {
+			font-size: 1rem;
+			margin-top: 1.5em;
+		}
+	}
+	
 
 	// 메인 배너
 	.main-banner {
-		padding-top: 0;
+		padding: 0;
 
 		&__swiper {
 
@@ -260,14 +466,16 @@ body {
 	}
 
 	// 메인 상품
-	.main-product {
+	.store-product {
+		// 카테고리
 		.category {
 			display: flex;
 			justify-content: center;
+			margin-bottom: 4rem;
 
 			li {
-				width: 125px;
-				padding: 0 10px;
+				width: toRem(125px);
+				padding: 0 toRem(10px);
 			}
 
 			&__item {
@@ -392,6 +600,78 @@ body {
 				color: #666;
 				word-break: keep-all;
 				text-align: center;
+			}
+		}
+	}
+
+	// Wonder Price
+	.wonder-price {
+		&__swiper {
+			.product {
+				&__thumbnail {
+					&::after {
+						transform: scale(0);
+						transition: 0.8s;
+						transition-delay: 0.1s;
+						will-change: transform;
+					}
+
+					img {
+						transform: translateY(30%);
+						opacity: 0;
+						transition: 0.5s;
+						transition-delay: 0.5s;
+						will-change: transform;
+					}
+				}
+			}
+
+			.swiper-slide {
+				&-active {
+					.product {
+						&__thumbnail {
+							&::after {
+								transform: scale(1) rotate(45deg);
+							}
+
+							img {
+								transform: translateY(0);
+								opacity: 1;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	// Best Review
+	.best-review {
+		overflow: hidden;
+		background-color: #f8f4ed;
+		border-top-right-radius: toRem(80px);
+		border-bottom-left-radius: toRem(80px);
+	}
+
+	// Event Banner
+	.event-banner {
+		&__list {
+			display: flex;
+			margin: 0 -30px;
+
+			li {
+				flex: 0 0 50%;
+				padding: 0 30px;
+			}
+
+			.event {
+				img {
+					display: block;
+					width: 100%;
+					height: auto;
+					max-height: 100%;
+					object-fit: cover;
+				}
 			}
 		}
 	}

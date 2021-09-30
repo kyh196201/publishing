@@ -1,0 +1,15 @@
+// https://medium.com/@bhargav3shah/scss-convert-pixel-values-to-rem-using-functions-f1cef575edfd
+@function stripUnit($value) {
+    @return $value / ($value * 0 + 1);
+}
+
+// Px to Rem
+@function toRem($pxValue, $base-font-size: $base-rem-value) {
+    @return #{stripUnit($pxValue) / stripUnit($base-font-size)}rem;
+}
+
+// Px to Em
+// stackoverflow.com/questions/53871707/sass-function-to-convert-px-to-em/56081655
+@function toEm($pxValue, $base-font-size: $base-rem-value) {
+    @return #{stripUnit($pxValue) / stripUnit($base-font-size)}em;
+}
