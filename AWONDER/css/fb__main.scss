@@ -1,0 +1,266 @@
+.fb {
+  // 헤더 배경 색상 설정
+  &:not(.is-scroll) {
+    &:not(.dark-mode) {
+      .fb {
+        &__main {
+          &__header {
+            background-color: transparent;
+            box-shadow: none;
+          }
+        }
+      }
+    }
+  }
+
+  // 다크 모드
+  &.dark-mode {
+  }
+
+  &.is-scroll {
+    .fb {
+      &__main {
+        &__header {
+          background-color: $white;
+        }
+      }
+    }
+  }
+
+  // 헤더 필터 설정
+  &.is-header-filter {
+    &:not(.is-scroll) {
+      &:not(.dark-mode) {
+        .fb {
+          &__main {
+            &__header {
+              .header {
+                &__logo {
+                  filter: brightness(99);
+                }
+
+                &__gnb {
+                  .gnb {
+                    &__menu {
+                      img {
+                        filter: brightness(99);
+                      }
+                    }
+
+                    &__title {
+                      filter: brightness(99);
+                    }
+                  }
+                }
+
+                &__menu-item {
+                  .icon {
+                    filter: brightness(99);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // 레이아웃 컨테이너
+  &__main {
+    min-width: 1200px;
+    max-width: 1920px;
+    margin: 0 auto;
+    box-shadow: $main-box-shadow;
+
+    // 메인 공통 슬라이더
+    &__slider {
+    }
+
+    // 메인 공통 섹션
+    &__sect {
+      padding: 100px 0;
+
+      .sect {
+        &__content {
+          max-width: 1430px;
+          margin: 0 auto;
+        }
+      }
+    }
+
+    // 헤더
+    &__header {
+      display: flex;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      max-width: 1920px;
+      height: 80px;
+      margin: 0 auto;
+      padding: 0 30px;
+      background-color: $white;
+      box-shadow: $header-box-shadow;
+      z-index: 10;
+
+      .header {
+        &__logo {
+          max-width: 171px;
+          margin-right: 45px;
+          transition: 0.2s;
+          will-change: filter;
+
+          a {
+            display: block;
+            line-height: 80px;
+            font-size: 0;
+          }
+
+          img {
+            display: inline-block;
+            width: 100%;
+            height: auto;
+            vertical-align: middle;
+          }
+        }
+
+        &__gnb {
+          display: flex;
+
+          .gnb {
+            &__item {
+              position: relative;
+
+              &:not(:last-child) {
+                margin-right: 50px;
+              }
+
+              &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 4px;
+                background-color: $main-color;
+                border-radius: 2px;
+                opacity: 0;
+                transition: opacity 0.2s;
+                will-change: opacity;
+              }
+
+              &.active,
+              &.is-store {
+                &::after {
+                  opacity: 1;
+                }
+              }
+            }
+
+            &__menu {
+              display: block;
+              position: relative;
+              line-height: 80px;
+
+              &--store {
+                &::before {
+                  content: '';
+                  position: absolute;
+                  top: 50%;
+                  left: 0;
+                  width: 23px;
+                  height: 25px;
+                  transform: translateY(-50%);
+                  background: url(../images/gnb-store-cart.png) no-repeat
+                    center/100%;
+                }
+
+                .gnb__title {
+                  font-size: 0;
+                }
+
+                img {
+                  display: inline-block;
+                  vertical-align: middle;
+                  transition: 0.2s;
+                  will-change: filter;
+                }
+              }
+            }
+
+            &__title {
+              vertical-align: middle;
+              color: $main-font-color;
+              font-weight: bold;
+              font-size: 1rem;
+              transition: 0.2s;
+              will-change: filter;
+            }
+          }
+        }
+
+        &__btn-wrap {
+          margin-left: auto;
+        }
+
+        &__menu {
+          display: flex;
+        }
+
+        &__menu-item {
+          &:not(:first-child) {
+            margin-left: 20px;
+          }
+
+          &.cart {
+            position: relative;
+
+            .cart-count {
+              position: absolute;
+              top: -4px;
+              right: -4px;
+              padding: 3px 4px;
+              min-width: 20px;
+              height: 20px;
+              font-size: 14px;
+              color: $white;
+              text-align: center;
+              background-color: $main-color;
+              border-radius: 10px;
+            }
+          }
+
+          .icon {
+            transition: 0.2s;
+            will-change: filter;
+          }
+        }
+      }
+    }
+
+    &__content {
+    }
+
+    // Main Visual
+    &__visual {
+      padding: 0;
+
+      .visual {
+        &__slider {
+          &__wrapper {
+          }
+
+          &__item {
+          }
+
+          &__banner {
+            img {
+            }
+          }
+        }
+      }
+    }
+  }
+}

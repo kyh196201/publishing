@@ -504,6 +504,210 @@ button {
      object-fit: cover;
 }
 
+.fb:not(.is-scroll):not(.dark-mode) .fb__main__header {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.fb.is-scroll .fb__main__header {
+  background-color: #fff;
+}
+
+.fb.is-header-filter:not(.is-scroll):not(.dark-mode) .fb__main__header .header__logo {
+  -webkit-filter: brightness(99);
+          filter: brightness(99);
+}
+
+.fb.is-header-filter:not(.is-scroll):not(.dark-mode) .fb__main__header .header__gnb .gnb__menu img {
+  -webkit-filter: brightness(99);
+          filter: brightness(99);
+}
+
+.fb.is-header-filter:not(.is-scroll):not(.dark-mode) .fb__main__header .header__gnb .gnb__title {
+  -webkit-filter: brightness(99);
+          filter: brightness(99);
+}
+
+.fb.is-header-filter:not(.is-scroll):not(.dark-mode) .fb__main__header .header__menu-item .icon {
+  -webkit-filter: brightness(99);
+          filter: brightness(99);
+}
+
+.fb__main {
+  min-width: 1200px;
+  max-width: 1920px;
+  margin: 0 auto;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.fb__main__sect {
+  padding: 100px 0;
+}
+
+.fb__main__sect .sect__content {
+  max-width: 1430px;
+  margin: 0 auto;
+}
+
+.fb__main__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  max-width: 1920px;
+  height: 80px;
+  margin: 0 auto;
+  padding: 0 30px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.fb__main__header .header__logo {
+  max-width: 171px;
+  margin-right: 45px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  will-change: filter;
+}
+
+.fb__main__header .header__logo a {
+  display: block;
+  line-height: 80px;
+  font-size: 0;
+}
+
+.fb__main__header .header__logo img {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.fb__main__header .header__gnb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.fb__main__header .header__gnb .gnb__item {
+  position: relative;
+}
+
+.fb__main__header .header__gnb .gnb__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.fb__main__header .header__gnb .gnb__item::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #00a468;
+  border-radius: 2px;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  will-change: opacity;
+}
+
+.fb__main__header .header__gnb .gnb__item.active::after, .fb__main__header .header__gnb .gnb__item.is-store::after {
+  opacity: 1;
+}
+
+.fb__main__header .header__gnb .gnb__menu {
+  display: block;
+  position: relative;
+  line-height: 80px;
+}
+
+.fb__main__header .header__gnb .gnb__menu--store::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 23px;
+  height: 25px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: url(../images/gnb-store-cart.png) no-repeat center/100%;
+}
+
+.fb__main__header .header__gnb .gnb__menu--store .gnb__title {
+  font-size: 0;
+}
+
+.fb__main__header .header__gnb .gnb__menu--store img {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  will-change: filter;
+}
+
+.fb__main__header .header__gnb .gnb__title {
+  vertical-align: middle;
+  color: #333;
+  font-weight: bold;
+  font-size: 1rem;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  will-change: filter;
+}
+
+.fb__main__header .header__btn-wrap {
+  margin-left: auto;
+}
+
+.fb__main__header .header__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.fb__main__header .header__menu-item:not(:first-child) {
+  margin-left: 20px;
+}
+
+.fb__main__header .header__menu-item.cart {
+  position: relative;
+}
+
+.fb__main__header .header__menu-item.cart .cart-count {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  padding: 3px 4px;
+  min-width: 20px;
+  height: 20px;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+  background-color: #00a468;
+  border-radius: 10px;
+}
+
+.fb__main__header .header__menu-item .icon {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  will-change: filter;
+}
+
+.fb__main__visual {
+  padding: 0;
+}
+
 #store .banner-swiper .swiper-button-next, #store .banner-swiper .swiper-button-prev {
   width: 54px;
   height: 54px;
