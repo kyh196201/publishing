@@ -1,172 +1,4 @@
 @charset "UTF-8";
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-
-body {
-  line-height: 1;
-}
-
-ol,
-ul {
-  list-style: none;
-}
-
-blockquote,
-q {
-  quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: '';
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-*, *::after, *::before {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-html {
-  font-size: 18px;
-}
-
-body {
-  font-size: 1rem;
-  font-family: 'Jost', 'Noto Sans KR', sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
-  letter-spacing: -0.025em;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-button {
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
-  outline: none;
-  border: none;
-  background-color: inherit;
-  font-family: inherit;
-  font-size: inherit;
-}
-
 #store .banner-swiper .swiper-button-next, #store .banner-swiper .swiper-button-prev {
   width: 54px;
   height: 54px;
@@ -242,14 +74,14 @@ button {
 #store .product-list li {
   float: left;
   width: 25%;
-  padding: 0 1.11111rem 4.44444rem;
+  padding: 0 toRem(20px) toRem(80px);
 }
 
 #store .product__thumbnail {
   overflow: hidden;
   position: relative;
   width: 100%;
-  border-radius: 2rem;
+  border-radius: toRem(36px);
 }
 
 #store .product__thumbnail img {
@@ -272,13 +104,13 @@ button {
 
 #store .product__name {
   margin: 1.25em 0 0.5em;
-  font-size: 1.25rem;
+  font-size: toRem(22.5px);
   font-weight: 600;
 }
 
 #store .product__desc {
   margin: 0 1em 0.5em 0;
-  font-size: 0.875rem;
+  font-size: toRem(15.75px);
   font-weight: 500;
   color: #999;
 }
@@ -304,12 +136,12 @@ button {
 }
 
 #store .product__origin-price {
-  font-size: 0.875rem;
+  font-size: toRem(15.75px);
   color: #999;
 }
 
 #store .product__sale-price {
-  font-size: 1.25rem;
+  font-size: toRem(22.5px);
 }
 
 #store .product__review-cont {
@@ -324,7 +156,7 @@ button {
 
 #store .product__review {
   display: inline-block;
-  font-size: 0.88889rem;
+  font-size: toRem(16px);
   line-height: 1.5;
 }
 
@@ -394,7 +226,7 @@ button {
 }
 
 #store .product.product--wide .product__sale-price {
-  font-size: 1.38889rem;
+  font-size: toRem(25px);
 }
 
 #store .star-rate {
@@ -624,8 +456,8 @@ button {
 }
 
 #store .main .store-product .category li {
-  width: 6.94444rem;
-  padding: 0 0.55556rem;
+  width: toRem(125px);
+  padding: 0 toRem(10px);
 }
 
 #store .main .store-product .category__item {
@@ -772,8 +604,8 @@ button {
 #store .main .best-review {
   overflow: hidden;
   background-color: #f8f4ed;
-  border-top-right-radius: 4.44444rem;
-  border-bottom-left-radius: 4.44444rem;
+  border-top-right-radius: toRem(80px);
+  border-bottom-left-radius: toRem(80px);
 }
 
 #store .main .event-banner__list {
@@ -798,4 +630,4 @@ button {
   -o-object-fit: cover;
      object-fit: cover;
 }
-/*# sourceMappingURL=Index.css.map */
+/*# sourceMappingURL=store.css.map */
