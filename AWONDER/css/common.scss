@@ -1,0 +1,116 @@
+// 아이콘
+.icon {
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	background: no-repeat center/100%;
+	cursor: pointer;
+
+	&__name {
+		font-size: 0;
+	}
+
+	&--search {
+		background-image: url('../images/icon-srch.svg');
+	}
+
+	&--cart {
+		background-image: url('../images/icon-cart.svg');
+	}
+
+	&--mypage {
+		background-image: url('../images/icon-user.svg');
+	}
+}
+
+// 스와이퍼
+.main-swiper {
+	.swiper-pagination {
+		line-height: 0;
+
+		&-bullet {
+			position: relative;
+			width: 10px;
+			height: 10px;
+			margin: 0 10px !important;
+			background-color: $white;
+			opacity: 0.5;
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: -8px;
+				right: -8px;
+				bottom: -8px;
+				left: -8px;
+				border-radius: 50%;
+				border: 2px solid transparent;
+				border-top-color: $white;
+				opacity: 0;
+				transition: 0.3s;
+				will-change: transform opacity;
+			}
+
+			// Active 상태
+			&-active {
+				opacity: 1;
+
+				&::before {
+					opacity: 1;
+					transform: rotate(45deg);
+				}
+			}
+		}
+	}
+
+	.swiper-button {
+		&-next,
+		&-prev {
+			width: 54px;
+			height: 54px;
+			border-radius: 50%;
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+			
+			&::after {
+				width: 100%;
+				height: 100%;
+				border-radius: 50%;
+				background: url('../images/swiper-btn.svg') no-repeat center/0.5rem;
+				background-color: $white;
+				font-size: 0;
+			}
+		}
+
+		&-prev {
+			&::after {
+				transform: rotate(180deg);
+			}
+		}
+	}
+}
+
+// 스와이퍼 네비게이션 버튼
+.swiper-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 54px;
+	height: 54px;
+	border-radius: 50%;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+	
+	&::after {
+		content: 'next';
+		width: 100%;
+		background: url('../images/swiper-btn.svg') no-repeat center/0.5rem;
+		background-color: $white;
+		font-size: 0;
+	}
+
+	&-prev {
+		&::after {
+			content: 'prev';
+			transform: rotate(180deg);
+		}
+	}
+}

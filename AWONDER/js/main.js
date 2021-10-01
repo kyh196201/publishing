@@ -1,27 +1,22 @@
 window.addEventListener('DOMContentLoaded', e => {
-	const mainBannerSwiper = new Swiper('.main-banner__swiper', {
+	const mainVisualSwiper = new Swiper('.main-visual__swiper', {
 		loop: true,
 	  
 		pagination: {
-		  el: '.main-banner__swiper .swiper-pagination',
+		  el: '.main-visual__swiper .swiper-pagination',
 		},
 	  
 		navigation: {
-		  nextEl: '.main-banner__swiper .swiper-button-next',
-		  prevEl: '.main-banner__swiper .swiper-button-prev',
+		  nextEl: '.main-visual__swiper .swiper-button-next',
+		  prevEl: '.main-visual__swiper .swiper-button-prev',
 		},
 	});
 
-	const wonderPriceSwiper = new Swiper('.wonder-price__swiper', {
+	const mainHistorySwiper = new Swiper('.main-history__swiper', {
 		loop: true,
 	  
 		pagination: {
-		  el: '.wonder-price__swiper .swiper-pagination',
-		},
-	  
-		navigation: {
-		  nextEl: '.wonder-price__swiper .swiper-button-next',
-		  prevEl: '.wonder-price__swiper .swiper-button-prev',
+		  el: '.main-history__swiper-wrap .swiper-pagination',
 		},
 	});
 });

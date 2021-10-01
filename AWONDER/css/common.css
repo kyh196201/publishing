@@ -1,0 +1,32 @@
+.icon {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background: no-repeat center/100%;
+  cursor: pointer;
+}
+
+.icon__name {
+  font-size: 0;
+}
+
+.icon--search {
+  background-image: url("../images/icon-srch.svg");
+}
+
+.icon--cart {
+  background-image: url("../images/icon-cart.svg");
+}
+
+.icon--mypage {
+  background-image: url("../images/icon-user.svg");
+}
+
+.swiper-btn {
+  display: inline-block;
+  width: 54px;
+  height: 54px;
+  font-size: 0;
+  background: url("../images/swiper-btn.svg") center/50%;
+}
+/*# sourceMappingURL=common.css.map */
