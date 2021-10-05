@@ -17,210 +17,330 @@
 </head>
 
 <body id="fb-main" class="fb">
-	<div id="container" class="fb__main">
+	<div id="container" class="fb__container">
 		<!-- 헤더 -->
-		<header class="fb__main__header">
-			<h1 class="header__logo">
-				<a href="./index.html">
-					<img src="./images/logo.png" alt="AWONDER">
-				</a>
-			</h1>
+		<header class="fb__header">
+			<div class="header__inner">
+				<h1 class="header__logo">
+					<a href="./fb.html">
+						<figure class="logo">
+							<img src="./images/logo.png" alt="AWONDER">
+						</figure>
+					</a>
+				</h1>
 
-			<ul class="header__gnb">
-				<li class="gnb__item">
-					<a href="#" class="gnb__menu">
-						<span class="gnb__title">ABOUT US</span>
-					</a>
-				</li>
-				<li class="gnb__item is-store">
-					<a href="#" class="gnb__menu gnb__menu--store">
-						<img src="./images/gnb-store.png" alt="AWONDER STORE">
-						<span class="gnb__title">STORE</span>
-					</a>
-				</li>
-				<li class="gnb__item">
-					<a href="#" class="gnb__menu">
-						<span class="gnb__title">WONDER CLUB</span>
-					</a>
-				</li>
-				<li class="gnb__item">
-					<a href="#" class="gnb__menu">
-						<span class="gnb__title">EVENT</span>
-					</a>
-				</li>
-				<li class="gnb__item">
-					<a href="#" class="gnb__menu">
-						<span class="gnb__title">COMMUNITY</span>
-					</a>
-				</li>
-			</ul>
+				<nav class="header__menu">
+					<ul class="menu">
+						<li class="menu__item">
+							<a href="#" class="menu__link">
+								<span class="menu__title">
+									ABOUT US
+								</span>
+							</a>
+						</li>
+						<li class="menu__item menu__item--store">
+							<a href="#" class="menu__link">
+								<img src="./images/gnb-store.png" class="menu__image" alt="gnb-store">
+								<span class="menu__title">
+									STORE
+								</span>
+							</a>
+						</li>
+						<li class="menu__item">
+							<a href="#" class="menu__link">
+								<span class="menu__title">
+									WONDER CLUB
+								</span>
+							</a>
+						</li>
+						<li class="menu__item">
+							<a href="#" class="menu__link">
+								<span class="menu__title">
+									EVENT
+								</span>
+							</a>
+						</li>
+						<li class="menu__item">
+							<a href="#" class="menu__link">
+								<span class="menu__title">
+									COMMUNITY
+								</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
 
-			<div class="header__btn-wrap">
-				<ul class="header__menu">
-					<li class="header__menu-item">
-						<button type="button" class="icon icon--search">
-							<span class="icon__name">검색하기</span>
-						</button>
-					</li>
-					<li class="header__menu-item cart">
-						<button type="button" class="icon icon--cart">
-							<span class="icon__name">장바구니</span>
-						</button>
-
-						<span class="cart-count">0</span>
-					</li>
-					<li class="header__menu-item">
-						<button type="button" class="icon icon--mypage">
-							<span class="icon__name">마이페이지</span>
-						</button>
-					</li>
-				</ul>
+				<div class="header__quick-menu">
+					<button class="quick-menu__icon quick-menu__icon--search">
+						<span>검색하기</span>
+					</button>
+					<a href="#" class="quick-menu__icon quick-menu__icon--cart">
+						<span>장바구니 페이지로 이동</span>
+						<div class="quick-menu__cart-count">0</div>
+					</a>
+					<a href="#" class="quick-menu__icon quick-menu__icon--mypage">
+						<span>마이 페이지로 이동</span>
+					</a>
+				</div>
 			</div>
 		</header>
 
 		<!-- 메인 -->
-		<main class="fb__main__content">
-			<!-- Main Visual -->
-			<section class="fb__main__sect fb__main__visual">
-				<div class="visual__slider swiper js__visual__slider fb__main__slider">
-					<ul class="visual__slider__wrapper swiper-wrapper">
-						<li class="visual__slider__item swiper-slide">
-							<a href="#">
-								<figure class="visual__slider__banner">
-									<img src="./images/main-visual-0.png" alt="원더풀 플로우 부스터">
-								</figure>
-							</a>
-						</li>
-						<li class="visual__slider__item swiper-slide">
-							<a href="#">
-								<figure class="visual__slider__banner">
-									<img src="./images/main-visual-1.png" alt="토비콤">
-								</figure>
-							</a>
-						</li>
-					</ul>
+		<section class="fb__content">
+			<main class="fb__main">
+				<h2 class="fb__title--hidden">메인 페이지</h2>
 
-					<nav class="visual__slider__nav slider__nav">
-						<div class="visual__slider__pagination slider__pagination"></div>
-						<div class="visual__slider__prev slider__prev"></div>
-						<div class="visual__slider__next slider__next"></div>
-					</nav>
-				</div>
-			</section>
+				<!-- 메인 비주얼 -->
+				<section class="fb__main__section fb__main__visual">
+					<h3 class="fb__title--hidden">메인 비주얼 슬라이더 영역</h3>
+					<div class="visual__slider swiper js__visual__slider">
+						<ul class="visual__slider__wrapper swiper-wrapper">
+							<li class="visual__slider__item swiper-slide">
+								<div class="banner">
+									<figure class="banner__image">
+										<img src="./images/main-visual-2.png" alt="고그린 캠페인">
+									</figure>
+									<div class="banner__info sr-only">
+										<small class="banner__phrase">
+											SAVE THE WONDER PLANET
+										</small>
+										<h3 class="banner__title">
+											GO GREEN
+										</h3>
+										<h4 class="banner__sub-title">
+											고그린 캠페인
+										</h4>
+										<p class="banner__desc">
+											지구를 지키고 우리의 건강도 지켜요!
+										</p>
+										<a href="#" class="banner__view-more btn btn--more">
+											VIEW MORE
+										</a>
+									</div>
+								</div>
+							</li>
+							<li class="visual__slider__item swiper-slide">
+								<a href="#">
+									<div class="banner">
+										<figure class="banner__image">
+											<img src="./images/main-visual-3.png" alt="싹 담아 이벤트">
+										</figure>
+										<div class="banner__info sr-only">
+											<small class="banner__phrase">
+												10월, 망설일 틈 없는 꿀 구성
+											</small>
+											<h3 class="banner__title">
+												싹 담아 이벤트
+											</h3>
+											<p class="banner__desc">
+												<span>#푸짐하게담은</span>
+												<span>#꿀_구성</span>
+												<span>#적립금+쿠폰</span>
+											</p>
+										</div>
+									</div>
+								</a>
+							</li>
+						</ul>
 
-			<!-- Main History -->
-			<section class="fb__main__sect main-history">
-				<div class="sect__content">
-					<div class="main-history__swiper-wrap">
-						<div class="swiper main-history__swiper">
-							<ul class="swiper-wrapper">
-								<li class="swiper-slide">
-									<figure class="main-history__image">
+						<nav class="visual__slider__nav js__slider__nav">
+							<div class="fb__slider__pagination-wrapper">
+								<div class="visual__slider__pagination fb__slider__pagination js__visual__pagination">
+								</div>
+								<button type="button" class="fb__slider__autoplay">
+									<span class="sr-only">시작/일시 정지</span>
+								</button>
+							</div>
+
+							<div class="visual__slider__navigation fb__slider__navigation">
+								<button class="fb__slider__prev-btn js__visual__prev-btn">
+									<span>이전 슬라이드로 이동</span>
+								</button>
+								<button class="fb__slider__next-btn js__visual__next-btn">
+									<span>다음 슬라이드로 이동</span>
+								</button>
+							</div>
+						</nav>
+					</div>
+				</section>
+
+				<!-- 메인 토비콤 history -->
+				<section class="fb__main__section fb__main__history">
+					<div class="history__slider swiper js__history__slider">
+						<section class="history__info-wrap">
+							<div class="history__info">
+								<h3 class="history__info__title">
+									SINCE 1981 <br>
+									TOBICOM
+								</h3>
+								<p class="history__info__detail">
+									국내 최초 먹는 눈 영양제, 토비콤 <br>
+									이제 눈 건강기능식품으로서 새롭게 다가갑니다.
+								</p>
+								<a href="#" class="history__info__view-more btn btn-lg">
+									<span>VIEW MORE</span>
+								</a>
+							</div>
+						</section>
+						<!-- <div class="history__event">
+								<a href="#" class="history__event__ad">
+									<figure class="ad__image">
+										<img src="./images/tobi-2021-2.jpg" alt="토비콤 링크 이미지">
+									</figure>
+									<span class="ad__badge">
+										play
+									</span>
+								</a>
+							</div> -->
+
+						<ul class="history__slider__wrapper swiper-wrapper">
+							<li class="history__slider__item swiper-slide">
+								<div class="history__slider__event">
+									<figure class="event__image">
 										<img src="./images/tobi-1981.png" alt="토비콤 캅셀">
 									</figure>
-								</li>
-								<li class="swiper-slide">
-									<figure class="main-history__image">
+									<div class="event__info">
+										<h3 class="event__year">1981</h3>
+										<p class="event__detail">
+											국내 최초 먹는 눈 영양제 토비콤 캅셀 출시
+										</p>
+									</div>
+								</div>
+							</li>
+							<li class="history__slider__item swiper-slide">
+								<div class="history__slider__event">
+									<figure class="event__image">
 										<img src="./images/tobi-1994.png" alt="토비콤 에스">
 									</figure>
-								</li>
-								<li class="swiper-slide">
-									<figure class="main-history__image">
+									<div class="event__info">
+										<h3 class="event__year">1994</h3>
+										<p class="event__detail">
+											토비콤 에스 출시
+										</p>
+									</div>
+								</div>
+							</li>
+							<li class="history__slider__item swiper-slide">
+								<div class="history__slider__event">
+									<figure class="event__image">
 										<img src="./images/tobi-1997.png" alt="토비콤 연질">
 									</figure>
-								</li>
-								<li class="swiper-slide">
-									<figure class="main-history__image">
+									<div class="event__info">
+										<h3 class="event__year">1997</h3>
+										<p class="event__detail">
+											토비콤 연질 출시
+										</p>
+									</div>
+								</div>
+							</li>
+							<li class="history__slider__item swiper-slide">
+								<div class="history__slider__event">
+									<figure class="event__image">
 										<img src="./images/tobi-2005.png" alt="토비콤 키드 츄어블">
 									</figure>
-								</li>
-								<li class="swiper-slide">
-									<figure class="main-history__image">
+									<div class="event__info">
+										<h3 class="event__year">2005</h3>
+										<p class="event__detail">
+											토비콤 키드 츄어블 출시
+										</p>
+									</div>
+								</div>
+							</li>
+							<li class="history__slider__item swiper-slide">
+								<div class="history__slider__event">
+									<figure class="event__image">
 										<img src="./images/tobi-2008.png" alt="토비콤 키드 큐텐 츄어블">
 									</figure>
-								</li>
-								<li class="swiper-slide">
-									<figure class="main-history__image">
+									<div class="event__info">
+										<h3 class="event__year">2008</h3>
+										<p class="event__detail">
+											토비콤 키드 큐텐 츄어블 출시
+										</p>
+									</div>
+								</div>
+							</li>
+							<li class="history__slider__item swiper-slide">
+								<div class="history__slider__event">
+									<figure class="event__image">
 										<img src="./images/tobi-2016.png" alt="토비콤 골드">
 									</figure>
-								</li>
-								<li class="swiper-slide">
-									<figure class="main-history__image">
+									<div class="event__info">
+										<h3 class="event__year">2016</h3>
+										<p class="event__detail">
+											토비콤 골드 출시
+										</p>
+									</div>
+								</div>
+							</li>
+							<li class="history__slider__item swiper-slide">
+								<div class="history__slider__event">
+									<figure class="event__image">
 										<img src="./images/tobi-2021.png" alt="건강기능식품 토비콤">
 									</figure>
-								</li>
-							</ul>
-						</div>
+									<div class="event__info">
+										<h3 class="event__year">2021</h3>
+										<p class="event__detail">
+											건강기능식품으로서 새롭게 탄생한 토비콤
+										</p>
+									</div>
+								</div>
+							</li>
+						</ul>
 
-						<div class="swiper-pagination-wrap">
-							<div class="swiper-pagination"></div>
-							<button type="button" class="autoplay-btn">
-								<span>재생/일시 정지</span>
-							</button>
-						</div>
+						<section class="history__ad-wrap">
+							<a href="#" class="history__ad">
+								<figure class="history__ad__image">
+									<img src="./images/tobi-2021-2.jpg" alt="토비콤 광고 이미지">
+								</figure>
+								<span class="history__ad__badge">
+									play
+								</span>
+							</a>
+						</section>
 					</div>
-				</div>
-			</section>
 
-			<!-- Main Brand -->
-			<section class="fb__main__sect main-brand">
-				<div class="sect__content">
+					<nav class="history__nav">
+						<ul class="history__pagination">
+							<li class="pagination__item active">
+								<strong class="pagination__year">1981</strong>
+								<div class="pagination__name">토비콤 캅셀</div>
+							</li>
+							<li class="pagination__item">
+								<strong class="pagination__year">1994</strong>
+								<div class="pagination__name">토비콤 에스</div>
+							</li>
+							<li class="pagination__item">
+								<strong class="pagination__year">1997</strong>
+								<div class="pagination__name">토비콤 연질</div>
+							</li>
+							<li class="pagination__item">
+								<strong class="pagination__year">2005</strong>
+								<div class="pagination__name">토비콤 키드<br> 츄어블</div>
+							</li>
+							<li class="pagination__item">
+								<strong class="pagination__year">2008</strong>
+								<div class="pagination__name">토비콤 키드 큐텐<br> 츄어블</div>
+							</li>
+							<li class="pagination__item">
+								<strong class="pagination__year">2016</strong>
+								<div class="pagination__name">토비콤 골드</div>
+							</li>
+							<li class="pagination__item">
+								<strong class="pagination__year">2021</strong>
+								<div class="pagination__name">건강기능식품<br> 토비콤</div>
+							</li>
+						</ul>
 
-				</div>
-			</section>
-
-			<!-- Main Best -->
-			<section class="fb__main__sect main-best">
-				<div class="sect__content">
-					<div class="sect__title-wrap">
-						<h3 class="sect__title"></h3>
-						<p class="sect__sub-title"></p>
-					</div>
-				</div>
-			</section>
-
-			<!-- Main Middle Banner -->
-			<section class="fb__main__sect main-middle-banner">
-
-			</section>
-
-			<!-- Main Wonder Club -->
-			<section class="fb__main__sect main-wonder-club">
-				<div class="sect__content">
-					<div class="sect__title-wrap">
-						<h3 class="sect__title"></h3>
-						<p class="sect__sub-title"></p>
-					</div>
-				</div>
-			</section>
-
-			<!-- Main Doctors Place -->
-			<section class="fb__main__sect main-doctors-place">
-				<div class="sect__content">
-					<div class="sect__header">
-						<div class="sect__title-wrap">
-							<h3 class="sect__title"></h3>
-							<p class="sect__sub-title"></p>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<!-- Main Event -->
-			<section class="fb__main__sect main-event">
-				<div class="sect__content">
-					<div class="sect__header">
-						<div class="sect__title-wrap">
-							<h3 class="sect__title"></h3>
-							<p class="sect__sub-title"></p>
-						</div>
-					</div>
-				</div>
-			</section>
-		</main>
+						<button class="fb__slider__autoplay history__autoplay">
+							<span class="sr-only">시작/일시 정지</span>
+						</button>
+					</nav>
+				</section>
+			</main>
+		</section>
 
 		<!-- 푸터 -->
-		<footer class="footer"></footer>
+		<footer class="fb__footer"></footer>
 	</div>
 	<script src="./js/fb__main.js"></script>
 </body>

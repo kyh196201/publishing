@@ -271,8 +271,8 @@
   min-width: 1200px;
   padding: 0 30px;
   background-color: #fff;
-  -webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   z-index: 99;
 }
 
@@ -405,8 +405,8 @@
 }
 
 #store .main__container {
-  -webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 #store .main__section {

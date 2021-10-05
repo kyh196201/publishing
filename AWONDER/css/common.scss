@@ -1,116 +1,269 @@
 // 아이콘
 .icon {
-	display: inline-block;
-	width: 32px;
-	height: 32px;
-	background: no-repeat center/100%;
-	cursor: pointer;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background: no-repeat center/100%;
+  cursor: pointer;
 
-	&__name {
-		font-size: 0;
-	}
+  &__name {
+    font-size: 0;
+  }
 
-	&--search {
-		background-image: url('../images/icon-srch.svg');
-	}
+  &--search {
+    background-image: url('../images/icon-srch.svg');
+  }
 
-	&--cart {
-		background-image: url('../images/icon-cart.svg');
-	}
+  &--cart {
+    background-image: url('../images/icon-cart.svg');
+  }
 
-	&--mypage {
-		background-image: url('../images/icon-user.svg');
-	}
+  &--mypage {
+    background-image: url('../images/icon-user.svg');
+  }
 }
 
 // 스와이퍼
 .main-swiper {
-	.swiper-pagination {
-		line-height: 0;
+  .swiper-pagination {
+    line-height: 0;
 
-		&-bullet {
-			position: relative;
-			width: 10px;
-			height: 10px;
-			margin: 0 10px !important;
-			background-color: $white;
-			opacity: 0.5;
+    &-bullet {
+      position: relative;
+      width: 10px;
+      height: 10px;
+      margin: 0 10px !important;
+      background-color: $white;
+      opacity: 0.5;
 
-			&::before {
-				content: '';
-				position: absolute;
-				top: -8px;
-				right: -8px;
-				bottom: -8px;
-				left: -8px;
-				border-radius: 50%;
-				border: 2px solid transparent;
-				border-top-color: $white;
-				opacity: 0;
-				transition: 0.3s;
-				will-change: transform opacity;
-			}
+      &::before {
+        content: '';
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        bottom: -8px;
+        left: -8px;
+        border-radius: 50%;
+        border: 2px solid transparent;
+        border-top-color: $white;
+        opacity: 0;
+        transition: 0.3s;
+        will-change: transform opacity;
+      }
 
-			// Active 상태
-			&-active {
-				opacity: 1;
+      // Active 상태
+      &-active {
+        opacity: 1;
 
-				&::before {
-					opacity: 1;
-					transform: rotate(45deg);
-				}
-			}
-		}
-	}
+        &::before {
+          opacity: 1;
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
 
-	.swiper-button {
-		&-next,
-		&-prev {
-			width: 54px;
-			height: 54px;
-			border-radius: 50%;
-			box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-			
-			&::after {
-				width: 100%;
-				height: 100%;
-				border-radius: 50%;
-				background: url('../images/swiper-btn.svg') no-repeat center/0.5rem;
-				background-color: $white;
-				font-size: 0;
-			}
-		}
+  .swiper-button {
+    &-next,
+    &-prev {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 
-		&-prev {
-			&::after {
-				transform: rotate(180deg);
-			}
-		}
-	}
+      &::after {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: url('../images/swiper-btn.svg') no-repeat center/0.5rem;
+        background-color: $white;
+        font-size: 0;
+      }
+    }
+
+    &-prev {
+      &::after {
+        transform: rotate(180deg);
+      }
+    }
+  }
 }
 
 // 스와이퍼 네비게이션 버튼
 .swiper-btn {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	width: 54px;
-	height: 54px;
-	border-radius: 50%;
-	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-	
-	&::after {
-		content: 'next';
-		width: 100%;
-		background: url('../images/swiper-btn.svg') no-repeat center/0.5rem;
-		background-color: $white;
-		font-size: 0;
-	}
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 
-	&-prev {
-		&::after {
-			content: 'prev';
-			transform: rotate(180deg);
-		}
-	}
+  &::after {
+    content: 'next';
+    width: 100%;
+    background: url('../images/swiper-btn.svg') no-repeat center/0.5rem;
+    background-color: $white;
+    font-size: 0;
+  }
+
+  &-prev {
+    &::after {
+      content: 'prev';
+      transform: rotate(180deg);
+    }
+  }
+}
+
+// IR
+.fb__title--hidden,
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+// 공통 컴포넌트
+.fb {
+  // 슬라이더 공통
+  &__slider {
+    &__pagination-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      bottom: 45px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+    }
+
+    &__pagination {
+      display: flex;
+      position: static;
+      width: auto !important;
+
+      .swiper-pagination {
+        &-bullet {
+          position: relative;
+          width: 10px;
+          height: 10px;
+          margin: 0 10px !important;
+          background-color: $white;
+          opacity: 0.7;
+
+          &::before {
+            content: '';
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            bottom: -8px;
+            left: -8px;
+            border: 2px solid transparent;
+            border-top-color: $white;
+            border-radius: 50%;
+            opacity: 0;
+            transition: 0.3s;
+          }
+
+          &-active {
+            opacity: 1;
+
+            &::before {
+              transform: rotate(45deg);
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+
+    &__navigation {
+    }
+
+    &__prev-btn,
+    &__next-btn {
+      position: absolute;
+      top: 50%;
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: url('../images/swiper-btn.svg') no-repeat center/0.5rem;
+      background-color: $white;
+      transform: translateY(-50%);
+      z-index: 1;
+
+      span {
+        font-size: 0;
+      }
+    }
+
+    &__prev-btn {
+      left: 10px;
+      transform: rotate(180deg);
+    }
+
+    &__next-btn {
+      right: 10px;
+    }
+
+    &__autoplay {
+      display: inline-block;
+      width: 36px;
+      height: 36px;
+      margin-left: 14px;
+      border-radius: 50%;
+      background-color: $white;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 10px;
+        height: 12px;
+        border: solid;
+        border-width: 6px 0 6px 10px;
+        border-color: transparent transparent transparent #333;
+      }
+
+      &.active {
+        &::before {
+          border-width: 0 3px 0 3px;
+          border-color: transparent #333 transparent #333;
+        }
+      }
+    }
+  }
+
+  // 버튼
+  .btn {
+    display: inline-block;
+    height: 40px;
+    padding: 0 10px;
+    border: 1px solid #333;
+    border-radius: 2em;
+    background-color: transparent;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+
+    &:hover {
+      background-color: #333;
+      color: $white;
+    }
+
+    &.btn-lg {
+      height: 60px;
+      border-radius: 2em;
+      line-height: 60px;
+      font-size: 16px;
+    }
+  }
 }

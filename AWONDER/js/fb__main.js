@@ -1,14 +1,19 @@
 window.addEventListener('DOMContentLoaded', e => {
-	const mainVisualSwiper = new Swiper('.js__visual__slider', {
+	const visualSlider = new Swiper('.js__visual__slider', {
 		loop: true,
 	  
-		// pagination: {
-		//   el: '',
-		// },
+		pagination: {
+		  el: '.js__visual__pagination',
+		},
 	  
-		// navigation: {
-		//   nextEl: '',
-		//   prevEl: '',
-		// },
+		navigation: {
+		  nextEl: '.js__visual__next-btn',
+		  prevEl: '.js__visual__prev-btn',
+		},
+	});
+
+	const historySlider = new Swiper('.js__history__slider', {
+		loop: true,
+		effect: "fade",
 	});
 });
