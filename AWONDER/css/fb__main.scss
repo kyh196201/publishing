@@ -191,9 +191,28 @@
     // 메인 페이지 섹션 공통 스타일
     &__section {
       padding: 100px 0;
+
+      // 섹션 공통 타이틀 스타일
+      .section {
+        &__title-wrap {
+          margin-bottom: 60px;
+          text-align: center;
+        }
+
+        &__title {
+          line-height: 1.5;
+          font-size: 54px;
+          font-weight: 600;
+        }
+
+        &__sub-title {
+          line-height: 1.5;
+          margin-top: 27px;
+        }
+      }
     }
 
-    // 메인 비주얼
+    // VISUAL
     &__visual {
       padding: 0;
 
@@ -243,7 +262,7 @@
       }
     }
 
-    // 토비콤 역사
+    // HISTORY
     &__history {
       .history {
         &__slider {
@@ -440,6 +459,283 @@
           width: 52px;
           height: 52px;
           margin: 20px auto 0;
+        }
+      }
+    }
+
+    // BRAND
+    &__brand {
+      background-color: #f8f4ed;
+      border-radius: 0 90px 0 90px;
+
+      .brand {
+        &__container {
+          position: relative;
+          max-width: 1430px;
+          margin: 0 auto;
+          padding: 0 30px;
+        }
+
+        &__slider {
+          &__item {
+            .brand {
+              // NOTE 🎉질문: flex, align-center안쓰고 중앙 정렬하는 방법이 있는지? 패딩??
+              display: flex;
+              align-items: center;
+
+              &__info {
+                position: relative;
+                flex: 1;
+                padding-left: 80px;
+
+                small {
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  text-transform: uppercase;
+                  font-weight: 600;
+                  color: #004738;
+                  writing-mode: vertical-lr;
+                }
+              }
+
+              &__name {
+                font-size: 54px;
+                font-weight: 600;
+                line-height: 1.5;
+              }
+
+              &__detail {
+                margin-top: 27px;
+                line-height: 1.5;
+                font-weight: 400;
+              }
+
+              &__view-more {
+                margin-top: 80px;
+                padding: 0 45px;
+              }
+
+              &__image {
+                position: relative;
+                flex: 1;
+
+                &::before {
+                  content: '';
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 26.56%;
+                  margin-top: 18%;
+                  padding-top: 27.611%;
+                  background: url('../images/brand1.png') no-repeat center/100%
+                    auto;
+                  z-index: 1;
+                }
+
+                &::after {
+                  content: '';
+                  position: absolute;
+                  top: 0;
+                  right: 0;
+                  width: 19.7%;
+                  margin-top: 29.85%;
+                  padding-top: 21.5%;
+                  background: url('../images/brand2.png') no-repeat center/100%
+                    auto;
+                  z-index: 1;
+                }
+
+                img {
+                  display: block;
+                  width: 100%;
+                  height: auto;
+                }
+              }
+
+              &__product {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                width: 50%;
+                margin: 0 0 10% 10%;
+                padding-left: 10%;
+
+                &::before {
+                  content: '';
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 10%;
+                  height: 2px;
+                  margin: 0.7rem 0 0 1rem;
+                  background-color: #333;
+                }
+
+                &__name {
+                  line-height: 1.4rem;
+                  font-size: 20px;
+                  font-weight: 600;
+                }
+
+                &__desc {
+                  line-height: 1.5;
+                  word-break: keep-all;
+                }
+              }
+            }
+          }
+
+          .fb__slider {
+            &__pagination {
+              &-wrapper {
+                bottom: 0;
+              }
+
+              .swiper-pagination {
+                &-bullet {
+                  background-color: #b2a090;
+
+                  &::before {
+                    border-top-color: #b2a090;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // BEST PRODUCT
+    &__best-product {
+      .best-product {
+        &__container {
+          max-width: 1430px;
+          margin: 0 auto;
+          padding: 0 15px;
+        }
+
+        &__slider {
+          &__item {
+            width: 33%;
+
+            .product {
+              max-width: 400px;
+              margin: 0 auto;
+              padding: 3rem 2rem;
+              background-color: #f8f4ed;
+              border-radius: 99em;
+
+              &__thumbnail {
+                position: relative;
+                width: 60%;
+                margin: 0 auto;
+
+                img {
+                  display: block;
+                  width: 100%;
+                  height: auto;
+                  max-width: 100%;
+                  object-fit: contain;
+                }
+              }
+
+              &__badge {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                width: 33.75%;
+                margin-right: -15%;
+                padding-top: 35.5%;
+                background: no-repeat center/100% auto;
+                background-image: url('../images/2021-08-06_20-28-06-24175-1628249286.png');
+
+                &.product__badge--shield {
+                  background-image: url('../images/2021-08-06_20-28-16-39733-1628249296.png');
+                }
+
+                &.product__badge--water {
+                  background-image: url('../images/2021-08-06_20-28-26-95512-1628249306.png');
+                }
+              }
+
+              &__info {
+                text-align: center;
+                line-height: 1.5;
+              }
+
+              &__name {
+                margin-top: 1em;
+                font-size: 1.5rem;
+                // line-height가 font-size의 1.5배 이므로
+                // 두줄이 될 경우 높이는 line-height의 2배 즉, font-size의 3배가 되어야한다.
+                height: 3em;
+                font-weight: bold;
+                @include line(2);
+              }
+
+              &__detail {
+                margin-top: 0.8em;
+                height: 3em;
+                @include line(2);
+              }
+
+              &__price {
+                margin-top: 0.8em;
+                font-size: 1rem;
+              }
+
+              &__origin-price {
+                display: block;
+                height: 1.5em;
+                color: $sale-price-color;
+                font-size: 1.15em;
+              }
+
+              &__sale-price {
+                font-size: 0;
+
+                em {
+                  font-weight: bold;
+                  font-size: 1.5rem;
+                }
+
+                span {
+                  font-size: 1rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // MIDDLE BANNER
+    &__middle-banner {
+      .middle-banner {
+        &__slider {
+          .fb__slider {
+            &__pagination-wrapper {
+              bottom: 10px;
+            }
+          }
+        }
+
+        &__link {
+          display: block;
+          width: 100%;
+        }
+
+        &__image {
+          overflow: hidden;
+          max-height: 200px;
+
+          img {
+            display: block;
+            width: 100%;
+            height: auto;
+          }
         }
       }
     }

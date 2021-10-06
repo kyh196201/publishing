@@ -205,7 +205,7 @@
 
     &__prev-btn {
       left: 10px;
-      transform: rotate(180deg);
+      transform: translateY(-50%) rotate(180deg);
     }
 
     &__next-btn {
