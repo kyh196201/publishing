@@ -194,6 +194,11 @@
 
       // 섹션 공통 타이틀 스타일
       .section {
+        &__container {
+          max-width: 1430px;
+          margin: 0 auto;
+        }
+
         &__title-wrap {
           margin-bottom: 60px;
           text-align: center;
@@ -208,6 +213,29 @@
         &__sub-title {
           line-height: 1.5;
           margin-top: 27px;
+        }
+
+        &__header {
+          display: flex;
+          align-items: center;
+
+          &__title-wrap {
+            display: flex;
+            align-items: center;
+            line-height: 1.5;
+          }
+
+          &__title {
+            text-transform: uppercase;
+            font-size: 2.5rem;
+            font-weight: 600;
+          }
+
+          &__sub-title {
+            margin-left: 1rem;
+            font-size: 0.9rem;
+            opacity: 0.7;
+          }
         }
       }
     }
@@ -736,6 +764,358 @@
             width: 100%;
             height: auto;
           }
+        }
+      }
+    }
+
+    // WONDER CLUB
+    &__wonder-club {
+      overflow: hidden;
+
+      .wonder-club {
+        &__container {
+          display: flex;
+          width: 100%;
+          max-width: 1430px;
+          margin: 0 auto;
+        }
+
+        &__megazine {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          position: relative;
+          width: 33.33%;
+          flex-shrink: 0;
+          z-index: 2;
+          background-color: $body-color;
+
+          &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 100vw;
+            background-color: inherit;
+            z-index: -1;
+          }
+
+          .megazine {
+            &__title {
+              line-height: 1.5;
+              font-size: 2.444rem;
+              font-weight: 600;
+            }
+
+            &__desc {
+              margin-top: 1.5em;
+              line-height: 1.5;
+              font-size: 1rem;
+            }
+
+            &__view-more {
+              margin-top: 4.5rem;
+              padding: 0 45px;
+              align-self: flex-start;
+            }
+          }
+        }
+
+        &__nav {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+
+          .fb__slider {
+            &__prev-btn,
+            &__next-btn {
+              position: static;
+            }
+
+            &__next-btn {
+              transform: translateX(-10px);
+            }
+
+            &__prev-btn {
+              transform: rotate(180deg);
+            }
+          }
+        }
+
+        &__slider {
+          flex: 1;
+          overflow: visible;
+
+          &__item {
+            width: 50%;
+          }
+        }
+
+        &__banner {
+          padding: 0 10px;
+
+          &__image {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            padding-bottom: 123%;
+            border-radius: 3rem;
+
+            img {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              min-height: 100%;
+              height: auto;
+              transition: 0.5s;
+              will-change: transform;
+            }
+          }
+
+          &__title {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 10%;
+            padding: 0 10%;
+            line-height: 1.5;
+            font-size: 1.556rem;
+            font-weight: 600;
+            color: $white;
+          }
+
+          &:hover {
+            img {
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+    }
+
+    // DOCTORS PLACE
+    &__doctors-place {
+      overflow: hidden;
+
+      .doctors-place {
+        &__container {
+          width: 100%;
+          max-width: 1430px;
+          margin: 0 auto;
+        }
+
+        &__header {
+          display: flex;
+          align-items: center;
+          position: relative;
+          margin-bottom: 3.222rem;
+        }
+
+        &__navigation {
+          position: absolute;
+          top: 0;
+          right: 0;
+
+          .fb__slider {
+            &__prev-btn,
+            &__next-btn {
+              position: static;
+            }
+
+            &__next-btn {
+              transform: translateX(-10px);
+            }
+
+            &__prev-btn {
+              transform: rotate(180deg);
+            }
+          }
+        }
+
+        &__slider {
+          overflow: visible;
+
+          &__item {
+            max-width: calc(380px + 3.2rem);
+            width: 33.3333%;
+            padding: 0 1.6rem;
+            transform: translateY(10%);
+            transition: 0.4s;
+            will-change: transform;
+
+            &:not(:last-child) {
+              margin-right: 4.5rem;
+            }
+
+            .place {
+              &__info {
+                position: relative;
+                padding: 18.5% 0 10%;
+                background-color: #f8f4ed;
+                border-radius: 50%;
+                font-size: 1.22em;
+                transition: 0.4s;
+              }
+
+              &__title {
+                line-height: 1.5;
+                text-align: center;
+                font-size: 1em;
+                font-weight: 600;
+                word-break: keep-all;
+              }
+
+              &__doctor {
+                display: block;
+              }
+
+              &__thumbnail {
+                width: 70%;
+                margin: 0 auto;
+
+                img {
+                  display: block;
+                  width: 100%;
+                  height: auto;
+                }
+              }
+
+              &__region {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: 0;
+                right: -1.6rem;
+                width: 5em;
+                background-color: #ffc94d;
+                border-radius: 50%;
+                line-height: 1.25;
+                font-size: 1.1em;
+                color: $white;
+
+                &::before {
+                  content: '';
+                  display: block;
+                  padding-bottom: 100%;
+                }
+              }
+
+              &__hidden-info {
+                margin-top: 2.222rem;
+                text-align: center;
+                transition: 0.4s;
+                opacity: 0;
+                will-change: opacity;
+
+                &__title {
+                  line-height: 1.5;
+                  font-size: 1.778rem;
+                  font-weight: 600;
+                }
+
+                &__desc {
+                  margin-top: 1rem;
+                  line-height: 1.5;
+                }
+              }
+            }
+
+            &.swiper-slide-active {
+              transform: translateY(0);
+
+              .place {
+                &__info {
+                  box-shadow: 0 1.6rem 2.222rem 0 rgba(0, 0, 0, 0.1);
+                }
+
+                &__hidden-info {
+                  opacity: 1;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // EVENT
+    &__event {
+      .event {
+        &__container {
+          position: relative;
+        }
+
+        &__header {
+          margin-bottom: 2.22rem;
+
+          &__view-more {
+            margin-left: auto;
+            padding: 0 45px;
+          }
+        }
+
+        &__slider-container {
+          position: relative;
+        }
+
+        &__slider {
+          &__item {
+            .banner {
+              &__image {
+                overflow: hidden;
+                border-radius: 22.5px;
+
+                img {
+                  display: block;
+                  width: 100%;
+                  height: auto;
+                }
+              }
+            }
+          }
+
+          &__nav {
+            .fb__slider {
+              &__pagination-wrapper {
+                position: static;
+                margin-top: 45px;
+                transform: initial;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // BOTTOM BANNER
+    &__bottom-banner {
+      .bottom-banner {
+        padding: 60px 0;
+        background: url('../images/test.jpg') no-repeat center/100% auto;
+
+        &__content {
+          max-width: 1230px;
+          margin: 0 auto;
+          color: $white;
+        }
+
+        &__title {
+          line-height: 1.5;
+          font-size: 2.222rem;
+          font-weight: 600;
+        }
+
+        &__desc {
+          margin-top: 15px;
+          line-height: 1.5;
+        }
+
+        &__btn {
+          margin-top: 30px;
+          padding: 0 45px;
         }
       }
     }

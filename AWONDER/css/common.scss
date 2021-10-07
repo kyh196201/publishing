@@ -181,9 +181,35 @@
           }
         }
       }
+
+      &--brown {
+        .swiper-pagination {
+          &-bullet {
+            background-color: #b2a090;
+
+            &::before {
+              border-top-color: #b2a090;
+            }
+          }
+        }
+      }
     }
 
     &__navigation {
+      &--green {
+        .fb {
+          &__slider {
+            &__prev-btn {
+              background-color: #f4f4f6;
+            }
+
+            &__next-btn {
+              background-color: $main-color;
+              background-image: url('../images/swiper-btn-white.svg');
+            }
+          }
+        }
+      }
     }
 
     &__prev-btn,
@@ -253,6 +279,7 @@
     text-align: center;
     font-size: 14px;
     font-weight: bold;
+    transition: 0.2s;
 
     &:hover {
       background-color: #333;
@@ -264,6 +291,11 @@
       border-radius: 2em;
       line-height: 60px;
       font-size: 16px;
+    }
+
+    &.btn-white {
+      border-color: $white;
+      color: $white;
     }
   }
 }

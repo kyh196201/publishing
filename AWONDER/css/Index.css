@@ -355,6 +355,23 @@ button {
   opacity: 1;
 }
 
+.fb__slider__pagination--brown .swiper-pagination-bullet {
+  background-color: #b2a090;
+}
+
+.fb__slider__pagination--brown .swiper-pagination-bullet::before {
+  border-top-color: #b2a090;
+}
+
+.fb__slider__navigation--green .fb__slider__prev-btn {
+  background-color: #f4f4f6;
+}
+
+.fb__slider__navigation--green .fb__slider__next-btn {
+  background-color: #00a468;
+  background-image: url("../images/swiper-btn-white.svg");
+}
+
 .fb__slider__prev-btn, .fb__slider__next-btn {
   position: absolute;
   top: 50%;
@@ -420,6 +437,8 @@ button {
   text-align: center;
   font-size: 14px;
   font-weight: bold;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .fb .btn:hover {
@@ -432,6 +451,11 @@ button {
   border-radius: 2em;
   line-height: 60px;
   font-size: 16px;
+}
+
+.fb .btn.btn-white {
+  border-color: #fff;
+  color: #fff;
 }
 
 #main-page .container {
@@ -830,6 +854,11 @@ button {
   padding: 100px 0;
 }
 
+.fb__main__section .section__container {
+  max-width: 1430px;
+  margin: 0 auto;
+}
+
 .fb__main__section .section__title-wrap {
   margin-bottom: 60px;
   text-align: center;
@@ -844,6 +873,37 @@ button {
 .fb__main__section .section__sub-title {
   line-height: 1.5;
   margin-top: 27px;
+}
+
+.fb__main__section .section__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.fb__main__section .section__header__title-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 1.5;
+}
+
+.fb__main__section .section__header__title {
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.fb__main__section .section__header__sub-title {
+  margin-left: 1rem;
+  font-size: 0.9rem;
+  opacity: 0.7;
 }
 
 .fb__main__visual {
@@ -1319,6 +1379,356 @@ button {
   display: block;
   width: 100%;
   height: auto;
+}
+
+.fb__main__wonder-club {
+  overflow: hidden;
+}
+
+.fb__main__wonder-club .wonder-club__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  max-width: 1430px;
+  margin: 0 auto;
+}
+
+.fb__main__wonder-club .wonder-club__megazine {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  width: 33.33%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  z-index: 2;
+  background-color: #f9f9f9;
+}
+
+.fb__main__wonder-club .wonder-club__megazine::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  background-color: inherit;
+  z-index: -1;
+}
+
+.fb__main__wonder-club .wonder-club__megazine .megazine__title {
+  line-height: 1.5;
+  font-size: 2.444rem;
+  font-weight: 600;
+}
+
+.fb__main__wonder-club .wonder-club__megazine .megazine__desc {
+  margin-top: 1.5em;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+.fb__main__wonder-club .wonder-club__megazine .megazine__view-more {
+  margin-top: 4.5rem;
+  padding: 0 45px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.fb__main__wonder-club .wonder-club__nav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.fb__main__wonder-club .wonder-club__nav .fb__slider__prev-btn, .fb__main__wonder-club .wonder-club__nav .fb__slider__next-btn {
+  position: static;
+}
+
+.fb__main__wonder-club .wonder-club__nav .fb__slider__next-btn {
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
+}
+
+.fb__main__wonder-club .wonder-club__nav .fb__slider__prev-btn {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.fb__main__wonder-club .wonder-club__slider {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  overflow: visible;
+}
+
+.fb__main__wonder-club .wonder-club__slider__item {
+  width: 50%;
+}
+
+.fb__main__wonder-club .wonder-club__banner {
+  padding: 0 10px;
+}
+
+.fb__main__wonder-club .wonder-club__banner__image {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding-bottom: 123%;
+  border-radius: 3rem;
+}
+
+.fb__main__wonder-club .wonder-club__banner__image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  height: auto;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  will-change: transform;
+}
+
+.fb__main__wonder-club .wonder-club__banner__title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10%;
+  padding: 0 10%;
+  line-height: 1.5;
+  font-size: 1.556rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.fb__main__wonder-club .wonder-club__banner:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.fb__main__doctors-place {
+  overflow: hidden;
+}
+
+.fb__main__doctors-place .doctors-place__container {
+  width: 100%;
+  max-width: 1430px;
+  margin: 0 auto;
+}
+
+.fb__main__doctors-place .doctors-place__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  margin-bottom: 3.222rem;
+}
+
+.fb__main__doctors-place .doctors-place__navigation {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.fb__main__doctors-place .doctors-place__navigation .fb__slider__prev-btn, .fb__main__doctors-place .doctors-place__navigation .fb__slider__next-btn {
+  position: static;
+}
+
+.fb__main__doctors-place .doctors-place__navigation .fb__slider__next-btn {
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
+}
+
+.fb__main__doctors-place .doctors-place__navigation .fb__slider__prev-btn {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.fb__main__doctors-place .doctors-place__slider {
+  overflow: visible;
+}
+
+.fb__main__doctors-place .doctors-place__slider__item {
+  max-width: calc(380px + 3.2rem);
+  width: 33.3333%;
+  padding: 0 1.6rem;
+  -webkit-transform: translateY(10%);
+          transform: translateY(10%);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  will-change: transform;
+}
+
+.fb__main__doctors-place .doctors-place__slider__item:not(:last-child) {
+  margin-right: 4.5rem;
+}
+
+.fb__main__doctors-place .doctors-place__slider__item .place__info {
+  position: relative;
+  padding: 18.5% 0 10%;
+  background-color: #f8f4ed;
+  border-radius: 50%;
+  font-size: 1.22em;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.fb__main__doctors-place .doctors-place__slider__item .place__title {
+  line-height: 1.5;
+  text-align: center;
+  font-size: 1em;
+  font-weight: 600;
+  word-break: keep-all;
+}
+
+.fb__main__doctors-place .doctors-place__slider__item .place__doctor {
+  display: block;
+}
+
+.fb__main__doctors-place .doctors-place__slider__item .place__thumbnail {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.fb__main__doctors-place .doctors-place__slider__item .place__thumbnail img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.fb__main__doctors-place .doctors-place__slider__item .place__region {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0;
+  right: -1.6rem;
+  width: 5em;
+  background-color: #ffc94d;
+  border-radius: 50%;
+  line-height: 1.25;
+  font-size: 1.1em;
+  color: #fff;
+}
+
+.fb__main__doctors-place .doctors-place__slider__item .place__region::before {
+  content: '';
+  display: block;
+  padding-bottom: 100%;
+}
+
+.fb__main__doctors-place .doctors-place__slider__item .place__hidden-info {
+  margin-top: 2.222rem;
+  text-align: center;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  opacity: 0;
+  will-change: opacity;
+}
+
+.fb__main__doctors-place .doctors-place__slider__item .place__hidden-info__title {
+  line-height: 1.5;
+  font-size: 1.778rem;
+  font-weight: 600;
+}
+
+.fb__main__doctors-place .doctors-place__slider__item .place__hidden-info__desc {
+  margin-top: 1rem;
+  line-height: 1.5;
+}
+
+.fb__main__doctors-place .doctors-place__slider__item.swiper-slide-active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.fb__main__doctors-place .doctors-place__slider__item.swiper-slide-active .place__info {
+  -webkit-box-shadow: 0 1.6rem 2.222rem 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1.6rem 2.222rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.fb__main__doctors-place .doctors-place__slider__item.swiper-slide-active .place__hidden-info {
+  opacity: 1;
+}
+
+.fb__main__event .event__container {
+  position: relative;
+}
+
+.fb__main__event .event__header {
+  margin-bottom: 2.22rem;
+}
+
+.fb__main__event .event__header__view-more {
+  margin-left: auto;
+  padding: 0 45px;
+}
+
+.fb__main__event .event__slider-container {
+  position: relative;
+}
+
+.fb__main__event .event__slider__item .banner__image {
+  overflow: hidden;
+  border-radius: 22.5px;
+}
+
+.fb__main__event .event__slider__item .banner__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.fb__main__event .event__slider__nav .fb__slider__pagination-wrapper {
+  position: static;
+  margin-top: 45px;
+  -webkit-transform: initial;
+          transform: initial;
+}
+
+.fb__main__bottom-banner .bottom-banner {
+  padding: 60px 0;
+  background: url("../images/test.jpg") no-repeat center/100% auto;
+}
+
+.fb__main__bottom-banner .bottom-banner__content {
+  max-width: 1230px;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.fb__main__bottom-banner .bottom-banner__title {
+  line-height: 1.5;
+  font-size: 2.222rem;
+  font-weight: 600;
+}
+
+.fb__main__bottom-banner .bottom-banner__desc {
+  margin-top: 15px;
+  line-height: 1.5;
+}
+
+.fb__main__bottom-banner .bottom-banner__btn {
+  margin-top: 30px;
+  padding: 0 45px;
 }
 
 #store .banner-swiper .swiper-button-next, #store .banner-swiper .swiper-button-prev {
