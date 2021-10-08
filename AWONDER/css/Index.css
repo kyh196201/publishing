@@ -456,6 +456,64 @@ button {
   color: #fff;
 }
 
+.scroll-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 60px;
+  padding: 15px 0;
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 30px;
+  color: #000;
+  text-align: center;
+  -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 30;
+  opacity: 0;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.scroll-top::before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 24px;
+  margin: 4px auto;
+  background: url("../images/icon-btn-top.svg") no-repeat center/100%;
+  background-color: inherit;
+}
+
+.scroll-top:hover {
+  border-color: #00a468;
+}
+
+.scroll-top.show {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.scroll-top.show .scroll-top__title {
+  max-height: 0;
+}
+
+.scroll-top__title {
+  display: block;
+  overflow: hidden;
+  max-height: 1.5em;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  -webkit-transition: max-height 0.3s;
+  transition: max-height 0.3s;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+}
+
 #main-page .container {
   min-width: 1200px;
   max-width: 1920px;

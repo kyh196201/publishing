@@ -297,3 +297,58 @@
     color: $white;
   }
 }
+
+.scroll-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 60px;
+  padding: 15px 0;
+  background-color: $white;
+  border: 1px solid transparent;
+  border-radius: 30px;
+  color: #000;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 30;
+  opacity: 0;
+  transform: scale(0);
+  transition: 0.2s;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 24px;
+    margin: 4px auto;
+    background: url('../images/icon-btn-top.svg') no-repeat center/100%;
+    background-color: inherit;
+  }
+
+  &:hover {
+    border-color: $main-color;
+  }
+
+  &.show {
+    opacity: 1;
+    transform: scale(1);
+
+    .scroll-top {
+      &__title {
+        max-height: 0;
+      }
+    }
+  }
+
+  &__title {
+    display: block;
+    overflow: hidden;
+    max-height: 1.5em;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: max-height 0.3s;
+    transition-delay: 1s;
+  }
+}

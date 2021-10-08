@@ -99,17 +99,16 @@ window.addEventListener('DOMContentLoaded', e => {
 	const bindEvents = () => {
 		window.addEventListener('scroll', e => {
 			const $header = document.querySelector('.fb__header');
+			const $scrollTop = document.querySelector('.scroll-top');
 
 			const scrollClassName = 'is-scroll';
 
 			if(window.scrollY > 0) {
-				if(!$header.classList.contains(scrollClassName)) {
 					$header.classList.add(scrollClassName);
-				}
-			} else {
-				if($header.classList.contains(scrollClassName)) {
+					$scrollTop.classList.add('show');
+				} else {
 					$header.classList.remove(scrollClassName);
-				}
+					$scrollTop.classList.remove('show');
 			}
 		});
 	};
