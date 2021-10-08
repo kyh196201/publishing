@@ -421,19 +421,18 @@ button {
   border-color: transparent transparent transparent #333;
 }
 
-.fb__slider__autoplay.active::before {
+.fb__slider__autoplay.play::before {
   border-width: 0 3px 0 3px;
   border-color: transparent #333 transparent #333;
 }
 
-.fb .btn {
+.btn {
   display: inline-block;
-  height: 40px;
-  padding: 0 10px;
+  padding: 10px;
   border: 1px solid #333;
   border-radius: 2em;
   background-color: transparent;
-  line-height: 40px;
+  line-height: 1.2;
   text-align: center;
   font-size: 14px;
   font-weight: bold;
@@ -441,19 +440,18 @@ button {
   transition: 0.2s;
 }
 
-.fb .btn:hover {
+.btn:hover {
   background-color: #333;
   color: #fff;
 }
 
-.fb .btn.btn-lg {
-  height: 60px;
+.btn.btn-lg {
+  padding: 15px;
   border-radius: 2em;
-  line-height: 60px;
   font-size: 16px;
 }
 
-.fb .btn.btn-white {
+.btn.btn-white {
   border-color: #fff;
   color: #fff;
 }
@@ -683,12 +681,6 @@ button {
   background-color: #f9f9f9;
 }
 
-.fb.is-scroll .fb__header {
-  background-color: #fff;
-  -webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
-}
-
 .fb__container {
   max-width: 1920px;
   margin: 0 auto;
@@ -706,6 +698,14 @@ button {
   margin: 0 auto;
   z-index: 10;
   background-color: transparent;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.fb__header.is-scroll {
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
 }
 
 .fb__header .header__inner {
@@ -995,7 +995,8 @@ button {
 
 .fb__main__history .history__info__view-more {
   margin-top: 80px;
-  padding: 0 45px;
+  padding-left: 45px;
+  padding-right: 45px;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
@@ -1164,7 +1165,8 @@ button {
 
 .fb__main__brand .brand__slider__item .brand__view-more {
   margin-top: 80px;
-  padding: 0 45px;
+  padding-left: 45px;
+  padding-right: 45px;
 }
 
 .fb__main__brand .brand__slider__item .brand__image {
@@ -1438,7 +1440,8 @@ button {
 
 .fb__main__wonder-club .wonder-club__megazine .megazine__view-more {
   margin-top: 4.5rem;
-  padding: 0 45px;
+  padding-left: 45px;
+  padding-right: 45px;
   -ms-flex-item-align: start;
       align-self: flex-start;
 }
@@ -1493,6 +1496,8 @@ button {
   width: 100%;
   min-height: 100%;
   height: auto;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
   -webkit-transition: 0.5s;
   transition: 0.5s;
   will-change: transform;
@@ -1511,8 +1516,8 @@ button {
 }
 
 .fb__main__wonder-club .wonder-club__banner:hover img {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .fb__main__doctors-place {
@@ -1636,7 +1641,7 @@ button {
 }
 
 .fb__main__doctors-place .doctors-place__slider__item .place__hidden-info {
-  margin-top: 2.222rem;
+  margin-top: 40px;
   text-align: center;
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -1661,8 +1666,8 @@ button {
 }
 
 .fb__main__doctors-place .doctors-place__slider__item.swiper-slide-active .place__info {
-  -webkit-box-shadow: 0 1.6rem 2.222rem 0 rgba(0, 0, 0, 0.1);
-          box-shadow: 0 1.6rem 2.222rem 0 rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 1.6rem 40px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1.6rem 40px 0 rgba(0, 0, 0, 0.1);
 }
 
 .fb__main__doctors-place .doctors-place__slider__item.swiper-slide-active .place__hidden-info {
@@ -1679,7 +1684,8 @@ button {
 
 .fb__main__event .event__header__view-more {
   margin-left: auto;
-  padding: 0 45px;
+  padding-left: 45px;
+  padding-right: 45px;
 }
 
 .fb__main__event .event__slider-container {
@@ -1704,6 +1710,10 @@ button {
           transform: initial;
 }
 
+.fb__main__bottom-banner {
+  padding: 0;
+}
+
 .fb__main__bottom-banner .bottom-banner {
   padding: 60px 0;
   background: url("../images/test.jpg") no-repeat center/100% auto;
@@ -1717,7 +1727,7 @@ button {
 
 .fb__main__bottom-banner .bottom-banner__title {
   line-height: 1.5;
-  font-size: 2.222rem;
+  font-size: 40px;
   font-weight: 600;
 }
 
@@ -1728,7 +1738,213 @@ button {
 
 .fb__main__bottom-banner .bottom-banner__btn {
   margin-top: 30px;
-  padding: 0 45px;
+  padding-left: 45px;
+  padding-right: 45px;
+}
+
+.fb__main__bottom-banner .bottom-banner__btn:hover {
+  color: inherit;
+  background-color: inherit;
+}
+
+.fb__footer .footer__inner {
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 20px 15px 40px;
+}
+
+.fb__footer .footer__top {
+  padding-bottom: 16px;
+}
+
+.fb__footer .footer__top::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.fb__footer .footer__event-banner {
+  float: left;
+}
+
+.fb__footer .footer__event-banner img {
+  display: block;
+}
+
+.fb__footer .footer__app-links {
+  float: right;
+  padding: 6.5px 0;
+  font-size: 0;
+}
+
+.fb__footer .footer__app-links li {
+  display: inline-block;
+}
+
+.fb__footer .footer__app-links li:not(:first-child) {
+  margin-left: 25px;
+}
+
+.fb__footer .footer__app-links .app-link {
+  display: block;
+  padding: 12px 21px;
+  background-color: #333;
+  border-radius: 20px;
+}
+
+.fb__footer .footer__mid {
+  margin-bottom: 30px;
+  padding: 40px 0 30px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.fb__footer .footer__mid::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.fb__footer .footer__company {
+  float: left;
+  padding: 0 15px;
+}
+
+.fb__footer .footer__company .company__sitemap {
+  margin-bottom: 30px;
+  font-size: 0;
+}
+
+.fb__footer .footer__company .company__sitemap__item {
+  display: inline-block;
+  line-height: 1.5;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.fb__footer .footer__company .company__sitemap__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.fb__footer .footer__company .company__sitemap__item:not(:last-child)::after {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 22.5px;
+  margin-left: 10px;
+  background-color: #ddd;
+  vertical-align: middle;
+}
+
+.fb__footer .footer__company .company__sitemap__link {
+  vertical-align: middle;
+}
+
+.fb__footer .footer__company .company__info {
+  margin-bottom: 30px;
+  color: #666;
+}
+
+.fb__footer .footer__company .company__info__detail {
+  font-size: 0;
+}
+
+.fb__footer .footer__company .company__info__detail span {
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.fb__footer .footer__company .company__info__detail span:not(:last-child) {
+  margin-right: 4px;
+}
+
+.fb__footer .footer__company .company__info__detail span:not(:last-child)::after {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 14px;
+  margin-left: 4px;
+  background-color: #666;
+  vertical-align: middle;
+}
+
+.fb__footer .footer__company .company__info__link {
+  color: #333;
+}
+
+.fb__footer .footer__company .company__service {
+  color: #666;
+}
+
+.fb__footer .footer__company .company__service h4 {
+  line-height: 1.5;
+  font-weight: 600;
+  font-size: 12.5px;
+}
+
+.fb__footer .footer__company .company__service__desc {
+  line-height: 1.5;
+  font-size: 12px;
+}
+
+.fb__footer .footer__cs-center {
+  float: right;
+  padding-right: 50px;
+}
+
+.fb__footer .footer__cs-center .cs-center__title {
+  margin-bottom: 10px;
+  line-height: 1.5;
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.fb__footer .footer__cs-center .cs-center__tel {
+  line-height: 1.5;
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.fb__footer .footer__cs-center .cs-center__time {
+  margin-bottom: 25px;
+}
+
+.fb__footer .footer__cs-center .cs-center__time li {
+  line-height: 1.5;
+  font-size: 14px;
+  color: #666;
+}
+
+.fb__footer .footer__cs-center .cs-center__sns-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.fb__footer .footer__cs-center .cs-center__sns-links li:not(:last-child) {
+  margin-right: 8px;
+}
+
+.fb__footer .footer__cs-center .cs-center__sns-links .sns-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 60px;
+  background: url("../images/icon-kakao-ch.png") no-repeat center/50% auto;
+  background-color: #f3f3f3;
+  border-radius: 50%;
+}
+
+.fb__footer .footer__cs-center .cs-center__sns-links .sns-link::after {
+  content: '';
+  padding-top: 100%;
+}
+
+.fb__footer .footer__copyright {
+  line-height: 1.5;
+  font-size: 12.5px;
+  color: #666;
+  opacity: 0.7;
 }
 
 #store .banner-swiper .swiper-button-next, #store .banner-swiper .swiper-button-prev {

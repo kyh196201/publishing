@@ -1,15 +1,6 @@
 .fb {
   background-color: $body-color;
 
-  &.is-scroll {
-    .fb {
-      &__header {
-        background-color: $white;
-        box-shadow: $header-box-shadow;
-      }
-    }
-  }
-
   // 레이아웃 컨테이너
   &__container {
     max-width: 1920px;
@@ -28,6 +19,12 @@
     margin: 0 auto;
     z-index: 10;
     background-color: transparent;
+    transition: 0.3s;
+
+    &.is-scroll {
+      background-color: $white;
+      box-shadow: $header-box-shadow;
+    }
 
     .header {
       &__inner {
@@ -375,7 +372,8 @@
 
           &__view-more {
             margin-top: 80px;
-            padding: 0 45px;
+            padding-left: 45px;
+            padding-right: 45px;
             transition: 0.2s;
           }
         }
@@ -541,7 +539,8 @@
 
               &__view-more {
                 margin-top: 80px;
-                padding: 0 45px;
+                padding-left: 45px;
+                padding-right: 45px;
               }
 
               &__image {
@@ -816,7 +815,8 @@
 
             &__view-more {
               margin-top: 4.5rem;
-              padding: 0 45px;
+              padding-left: 45px;
+              padding-right: 45px;
               align-self: flex-start;
             }
           }
@@ -869,6 +869,7 @@
               width: 100%;
               min-height: 100%;
               height: auto;
+              transform: scale(1.1);
               transition: 0.5s;
               will-change: transform;
             }
@@ -888,7 +889,7 @@
 
           &:hover {
             img {
-              transform: scale(1.1);
+              transform: scale(1.2);
             }
           }
         }
@@ -1004,7 +1005,7 @@
               }
 
               &__hidden-info {
-                margin-top: 2.222rem;
+                margin-top: 40px;
                 text-align: center;
                 transition: 0.4s;
                 opacity: 0;
@@ -1028,7 +1029,7 @@
 
               .place {
                 &__info {
-                  box-shadow: 0 1.6rem 2.222rem 0 rgba(0, 0, 0, 0.1);
+                  box-shadow: 0 1.6rem 40px 0 rgba(0, 0, 0, 0.1);
                 }
 
                 &__hidden-info {
@@ -1053,7 +1054,8 @@
 
           &__view-more {
             margin-left: auto;
-            padding: 0 45px;
+            padding-left: 45px;
+            padding-right: 45px;
           }
         }
 
@@ -1092,6 +1094,8 @@
 
     // BOTTOM BANNER
     &__bottom-banner {
+      padding: 0;
+
       .bottom-banner {
         padding: 60px 0;
         background: url('../images/test.jpg') no-repeat center/100% auto;
@@ -1104,7 +1108,7 @@
 
         &__title {
           line-height: 1.5;
-          font-size: 2.222rem;
+          font-size: 40px;
           font-weight: 600;
         }
 
@@ -1115,7 +1119,13 @@
 
         &__btn {
           margin-top: 30px;
-          padding: 0 45px;
+          padding-left: 45px;
+          padding-right: 45px;
+
+          &:hover {
+            color: inherit;
+            background-color: inherit;
+          }
         }
       }
     }
@@ -1123,5 +1133,217 @@
 
   // 푸터
   &__footer {
+    .footer {
+      &__inner {
+        max-width: 1230px;
+        margin: 0 auto;
+        padding: 20px 15px 40px;
+      }
+
+      &__top {
+        padding-bottom: 16px;
+
+        @include clearfix;
+      }
+
+      &__event-banner {
+        float: left;
+
+        img {
+          display: block;
+        }
+      }
+
+      &__app-links {
+        float: right;
+        padding: 6.5px 0;
+        font-size: 0;
+
+        li {
+          display: inline-block;
+
+          &:not(:first-child) {
+            margin-left: 25px;
+          }
+        }
+
+        .app-link {
+          display: block;
+          padding: 12px 21px;
+          background-color: #333;
+          border-radius: 20px;
+        }
+      }
+
+      &__mid {
+        margin-bottom: 30px;
+        padding: 40px 0 30px;
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+
+        @include clearfix;
+      }
+
+      &__company {
+        float: left;
+        padding: 0 15px;
+
+        .company {
+          &__sitemap {
+            margin-bottom: 30px;
+            font-size: 0;
+
+            &__item {
+              display: inline-block;
+              line-height: 1.5;
+              font-size: 15px;
+              font-weight: 600;
+
+              &:not(:last-child) {
+                margin-right: 10px;
+
+                &::after {
+                  content: '';
+                  display: inline-block;
+                  width: 1px;
+                  height: 22.5px;
+                  margin-left: 10px;
+                  background-color: #ddd;
+                  vertical-align: middle;
+                }
+              }
+            }
+
+            &__link {
+              vertical-align: middle;
+            }
+          }
+
+          &__info {
+            margin-bottom: 30px;
+            color: #666;
+
+            &__detail {
+              font-size: 0;
+
+              span {
+                line-height: 1.5;
+                font-size: 14px;
+
+                &:not(:last-child) {
+                  margin-right: 4px;
+
+                  &::after {
+                    content: '';
+                    display: inline-block;
+                    width: 1px;
+                    height: 14px;
+                    margin-left: 4px;
+                    background-color: #666;
+                    vertical-align: middle;
+                  }
+                }
+              }
+            }
+
+            &__link {
+              color: #333;
+            }
+          }
+
+          &__service {
+            color: #666;
+
+            h4 {
+              line-height: 1.5;
+              font-weight: 600;
+              font-size: 12.5px;
+            }
+
+            &__desc {
+              line-height: 1.5;
+              font-size: 12px;
+            }
+          }
+        }
+      }
+
+      &__cs-center {
+        float: right;
+        padding-right: 50px;
+
+        .cs-center {
+          &__title {
+            margin-bottom: 10px;
+            line-height: 1.5;
+            font-weight: 500;
+            font-size: 17px;
+          }
+
+          &__tel {
+            line-height: 1.5;
+            font-weight: 600;
+            font-size: 25px;
+          }
+
+          &__time {
+            margin-bottom: 25px;
+
+            li {
+              line-height: 1.5;
+              font-size: 14px;
+              color: #666;
+            }
+          }
+
+          &__sns-links {
+            display: flex;
+
+            li {
+              &:not(:last-child) {
+                margin-right: 8px;
+              }
+            }
+
+            .sns-link {
+              display: flex;
+              width: 60px;
+              background: url('../images/icon-kakao-ch.png') no-repeat
+                center/50% auto;
+
+              background-color: #f3f3f3;
+              border-radius: 50%;
+
+              &::after {
+                content: '';
+                padding-top: 100%;
+              }
+
+              &.sns-link--instagram {
+              }
+
+              &.sns-link--youtube {
+              }
+
+              &.sns-link--kakao {
+              }
+            }
+          }
+        }
+      }
+
+      &__bottom {
+      }
+
+      &__copyright {
+        line-height: 1.5;
+        font-size: 12.5px;
+        color: #666;
+        opacity: 0.7;
+      }
+
+      &__faily-sitemap {
+      }
+    }
   }
 }

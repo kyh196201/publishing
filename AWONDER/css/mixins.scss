@@ -1,18 +1,26 @@
 @mixin line($lineCount: 1) {
-    /* 사용법 : @include line(라인수) */
-    @if ($lineCount == 1) {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    } @else {
-        /* autoprefixer: off */
-        -webkit-box-orient: vertical;
-        /* autoprefixer: on */
-        display: block;
-        display: -webkit-box;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        word-break: break-all;
-        -webkit-line-clamp: $lineCount;
-    }
+  /* 사용법 : @include line(라인수) */
+  @if ($lineCount == 1) {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  } @else {
+    /* autoprefixer: off */
+    -webkit-box-orient: vertical;
+    /* autoprefixer: on */
+    display: block;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    -webkit-line-clamp: $lineCount;
+  }
+}
+
+@mixin clearfix() {
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
 }
