@@ -1,6 +1,4 @@
 .fb {
-  background-color: $body-color;
-
   // 레이아웃 컨테이너
   &__container {
     max-width: 1920px;
@@ -129,15 +127,18 @@
       }
 
       &__quick-menu {
-        display: flex;
-        align-items: center;
         margin-left: auto;
+        // inline-block 중앙 정렬 ? padding ?
+        line-height: 80px;
+        font-size: 0;
 
         .quick-menu {
           &__icon {
+            display: inline-block;
             width: 32px;
             height: 32px;
             background: no-repeat center/100%;
+            vertical-align: middle;
 
             span {
               font-size: 0;
@@ -180,12 +181,9 @@
     }
   }
 
-  // FIXME 이름 수정 필요
-  &__content {
-  }
-
+  // 메인 페이지
   &__main {
-    // 메인 페이지 섹션 공통 스타일
+    // 섹션 공통 스타일
     &__section {
       padding: 100px 0;
 

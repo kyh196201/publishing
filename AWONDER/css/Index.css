@@ -735,10 +735,6 @@ button {
      object-fit: cover;
 }
 
-.fb {
-  background-color: #f9f9f9;
-}
-
 .fb__container {
   max-width: 1920px;
   margin: 0 auto;
@@ -857,19 +853,17 @@ button {
 }
 
 .fb__header .header__quick-menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   margin-left: auto;
+  line-height: 80px;
+  font-size: 0;
 }
 
 .fb__header .header__quick-menu .quick-menu__icon {
+  display: inline-block;
   width: 32px;
   height: 32px;
   background: no-repeat center/100%;
+  vertical-align: middle;
 }
 
 .fb__header .header__quick-menu .quick-menu__icon span {

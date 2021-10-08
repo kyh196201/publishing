@@ -98,17 +98,16 @@ window.addEventListener('DOMContentLoaded', e => {
 
 	const bindEvents = () => {
 		window.addEventListener('scroll', e => {
-			const $header = document.querySelector('.fb__header');
-			const $scrollTop = document.querySelector('.scroll-top');
-
-			const scrollClassName = 'is-scroll';
+			// 엘리먼트
+			const $header = document.querySelector('.js__header');
+			const $scrollTop = document.querySelector('.js__scroll-top');
 
 			if(window.scrollY > 0) {
-					$header.classList.add(scrollClassName);
-					$scrollTop.classList.add('show');
-				} else {
-					$header.classList.remove(scrollClassName);
-					$scrollTop.classList.remove('show');
+				$header.classList.add('is-scroll');
+				$scrollTop.classList.add('show');
+			} else {
+				$header.classList.remove('is-scroll');
+				$scrollTop.classList.remove('show');
 			}
 		});
 	};
